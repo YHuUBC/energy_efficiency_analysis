@@ -10,7 +10,7 @@ This project is a group study according to DSCI 522 (Data Science workflows); a
 course in the Master of Data Science program at the University of
 British Columbia, Fall 2022.
 
-## About
+## Project proposal
 
 In this project, we attemp to find important parameters of building that affect to the heating and cooling load.
 We plan to build a number of different regression models such as 
@@ -60,6 +60,17 @@ The final report can be found
 [here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
 ?? need to change url
 
+## Usage
+
+To run this analysis, clone this project repository to your local,
+prompt the command line and change directory to the project folder,
+and run, 
+
+    conda env create --file env-dsci-573.yaml
+
+The new environment env-dsci-573 will be created in your conda environment,
+and we will use this as the main environment to run the analysis.
+
 ## Dependencies
 
 The Python and Python packages can be found
@@ -88,5 +99,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+# References
 
-
+[1] A. Tsanas, A. Xifara: 'Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
