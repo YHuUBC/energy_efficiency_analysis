@@ -51,7 +51,3 @@ After reviewing the complaint , the project team will take any steps deemed nece
 
 This code of conduct is cited from [Pandas code of conduct](https://github.com/pandas-dev/pandas-governance/blob/master/code-of-conduct.md) , which is adapted from the Contributor Covenant, version 1.3.0, available at http://contributor-covenant.org/version/1/3/0/, and the Swift Code of Conduct.
 <!-- #endregion -->
-
-```python
-
-```
