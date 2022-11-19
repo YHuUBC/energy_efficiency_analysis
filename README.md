@@ -41,16 +41,25 @@ including the response (e.g., Heating Load, Cooling Load).
 
 Specifically:
 
-  X1 Relative Compactness
-  X2 Surface Area
-  X3 Wall Area
-  X4 Roof Area
-  X5 Overall Height
-  X6 Orientation
-  X7 Glazing Area
-  X8 Glazing Area Distribution
-  y1 Heating Load
-  y2 Cooling Load
+X1 Relative Compactness
+
+X2 Surface Area
+
+X3 Wall Area
+
+X4 Roof Area
+
+X5 Overall Height
+
+X6 Orientation
+
+X7 Glazing Area
+
+X8 Glazing Area Distribution
+
+y1 Heating Load
+
+y2 Cooling Load
 
 ## EDA
 **Summary of the data set**
