@@ -1,4 +1,8 @@
 # +
+# author: Tiffany Timbers
+# date: 2019-12-18
+# --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx
+# --out_file=ENB2012data.csv
 """Downloads data excel data from the web to a local filepath as either a csv  file format.
 Usage: src/down_data.py  --url=<url> --out_file=<out_file>
 Options:
@@ -32,6 +36,3 @@ def main(url, out_file):
 
 if __name__ == "__main__":
   main( opt["--url"], opt["--out_file"])
-# -
-
-
