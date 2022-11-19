@@ -60,6 +60,17 @@ The final report can be found
 [here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
 ?? need to change url
 
+## Usage
+
+To run this analysis, clone this project repository to your local,
+prompt the command line and change directory to the project folder,
+and run, 
+
+    conda env create --file env-dsci-573.yaml
+
+The new environment env-dsci-573 will be created in your conda environment,
+and we will use this as the main environment to run the analysis.
+
 ## Dependencies
 
 The Python and Python packages can be found
