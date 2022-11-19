@@ -41,9 +41,9 @@ Project maintainers commit themselves to fairly and consistently applying these 
 ## ENFORCEMENT 
 
 Any incident of harassment or unacceptable behavior can be reported to the team members. 
-- Mehwish
-- Nate
+- Mehwish Nabi
 - Yaou Hu 
+- Nate Puangpanbut
 
 After reviewing the complaint , the project team will take any steps deemed necessary. The privacy of the complaint is to be maintained by the project team.
 
