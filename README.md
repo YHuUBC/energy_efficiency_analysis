@@ -63,8 +63,7 @@ The final report can be found
 ## Dependencies
 
 The Python and Python packages can be found
-[here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
-?? need to change url
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/modify_readme_file/env-dsci-573.yaml).
 
 ## License
 
