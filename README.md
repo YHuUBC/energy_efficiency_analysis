@@ -10,7 +10,7 @@ This project is a group study according to DSCI 522 (Data Science workflows); a
 course in the Master of Data Science program at the University of
 British Columbia, Fall 2022.
 
-## About
+## Project proposal
 
 In this project, we attemp to find important parameters of building that affect to the heating and cooling load.
 We plan to build a number of different regression models such as 
@@ -88,5 +88,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+# References
 
-
+[1] A. Tsanas, A. Xifara: 'Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
