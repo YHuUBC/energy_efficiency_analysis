@@ -1,9 +1,10 @@
 # +
 # author: Tiffany Timbers
 # date: 2019-12-18
-# --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx
-# --out_file=ENB2012data.csv
-"""Downloads data excel data from the web to a local filepath as either a csv  file format.
+## code to download
+# python src/download_data.py --url='http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx' 
+#--out_file=data/raw/ENB2012_data.xlsx
+"""Downloads data excel data from the web to a local filepath in excel file format.
 Usage: src/down_data.py  --url=<url> --out_file=<out_file>
 Options:
 
@@ -29,10 +30,10 @@ def main(url, out_file):
   data = pd.read_excel(url, header=0)
   
   try:
-      data.to_csv(out_file, index = False)
+      data.to_excel(out_file, index = False)
   except:
       os.makedirs(os.path.dirname(out_file))
-      data.to_csv(out_file, index = False)
+      data.to_excel(out_file, index = False)
 
 if __name__ == "__main__":
   main( opt["--url"], opt["--out_file"])
