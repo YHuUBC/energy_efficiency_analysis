@@ -33,7 +33,7 @@
 # 
 # The exploratory data analysis were conducted through the following steps:
 # 1.load in the necessary packages and split the data into train and test sets, NaN were dropped;
-# 2.do EDA on the train set. First to check the data types and see if there are missing values; we found out that there is no missing value. Then we proceed to see the data distribution through bar plots, value_counts, correlations. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' are actually categorical.
+# 2.do EDA on the train set. First to check the data types and see if there are missing values; we found out that there is no missing value. Then we proceed to see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' are actually categorical.
 # 3.From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling and One Hot Encode on the numeric features with Heating Load and Cooling Load as the targets.
 
 # In[1]:
@@ -53,7 +53,7 @@ from sklearn.model_selection import train_test_split
 # read in data set
 # rename the attributes
 # source:http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#
-energy_data = pd.read_csv('https://raw.githubusercontent.com/UBC-MDS/energy_efficiency_analysis/main/data/ENB2012data.csv').dropna()
+energy_data = pd.read_csv('https://raw.githubusercontent.com/UBC-MDS/energy_efficiency_analysis/main/data/processed/energy_effeciency_processed.csv').dropna()
 energy_data = energy_data.rename(columns = {'X1':'Relative Compactness',
                                             'X2':'Surface Area',
                                             'X3':'Wall Area',
