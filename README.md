@@ -33,7 +33,7 @@ and was processed by Athanasios Tsanas (tsanasthanasis '@' gmail.com,
 Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK), 
 and is made available under the UCI Machine Learning Repository and can be found
 [here](http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#)
-specifically [this file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx).
+specifically [this file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/).
 
 Each row in the data set represents interested features of building heating and cooling load 
 from the afore-mentioned characteristics simulation (e.g., Relative Compactness, Surface Area, Wall Area, etc..),
