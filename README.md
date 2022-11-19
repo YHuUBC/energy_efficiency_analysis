@@ -40,6 +40,7 @@ from the afore-mentioned characteristics simulation (e.g., Relative Compactness,
 including the response (e.g., Heating Load, Cooling Load).
 
 Specifically:
+
 X1 Relative Compactness
 X2 Surface Area
 X3 Wall Area
