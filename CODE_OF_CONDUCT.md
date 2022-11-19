@@ -42,7 +42,11 @@ Project maintainers commit themselves to fairly and consistently applying these 
 
 #### ENFORCEMENT 
 
-Any incident of harassment or unacceptable behavior can be reported to the team members. After reviewing the complaint , the project team will take any steps deemed necessary. The privacy of the complaint is to be maintained by the project team.
+Any incident of harassment or unacceptable behavior can be reported to the team members. 
+- Mehwish
+- Nate
+- Yaou Hu 
+After reviewing the complaint , the project team will take any steps deemed necessary. The privacy of the complaint is to be maintained by the project team.
 
 #### ATTRIBUTION 
 
