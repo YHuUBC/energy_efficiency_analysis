@@ -1,13 +1,11 @@
-## Code of Conduct
-
 <!-- #region -->
-
+## Code of Conduct
 
 A respectful space for contributors and participants is what the code of conduct seeks to establish by fostering an open and inclusive environment. We commit to being approachable, considerate, and respectful to everyone, regardless of their age, size, ability, ethnicity, degree of experience, country of origin, outward appearance, race, religion, or sexual orientation.
 
 In all forms of collaborative interaction, we strive to provide standard behaviors.
 
-#### SCOPE 
+## SCOPE 
 
 The scope of this code of conduct applies both within a project and in public spaces where the members represent the community. The virtual space includes communicating using an official email address or official social media channels. Additionally, this applies to the public and private representation of the community.
 
@@ -40,21 +38,16 @@ Maintainers have the right and responsibility to remove, edit, or reject comment
 
 Project maintainers commit themselves to fairly and consistently applying these principles to every aspect of managing this project. Failure to do so can lead to permanent removal from the project team.
 
-#### ENFORCEMENT 
+## ENFORCEMENT 
 
 Any incident of harassment or unacceptable behavior can be reported to the team members. 
 - Mehwish
 - Nate
 - Yaou Hu 
+
 After reviewing the complaint , the project team will take any steps deemed necessary. The privacy of the complaint is to be maintained by the project team.
 
-#### ATTRIBUTION 
+## ATTRIBUTION 
 
-This code of conduct is cited as being adapted from [Pandas code of conduct](https://github.com/pandas-dev/pandas-governance/blob/master/code-of-conduct.md) , which is adapted from the Contributor Covenant, version 1.3.0, available at http://contributor-covenant.org/version/1/3/0/, and the Swift Code of Conduct.
-
-
+This code of conduct is cited from [Pandas code of conduct](https://github.com/pandas-dev/pandas-governance/blob/master/code-of-conduct.md) , which is adapted from the Contributor Covenant, version 1.3.0, available at http://contributor-covenant.org/version/1/3/0/, and the Swift Code of Conduct.
 <!-- #endregion -->
-
-```python
-
-```
