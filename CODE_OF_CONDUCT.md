@@ -10,7 +10,7 @@ In all forms of collaborative interaction, we strive to provide standard behavio
 The scope of this code of conduct applies both within a project and in public spaces where the members represent the community. The virtual space includes communicating using an official email address or official social media channels. Additionally, this applies to the public and private representation of the community.
 
  
-
+## STANDARDS
 Here are some examples of acceptable behaviors: 
 
 - being considerate of other people's time and effort.
@@ -51,3 +51,7 @@ After reviewing the complaint , the project team will take any steps deemed nece
 
 This code of conduct is cited from [Pandas code of conduct](https://github.com/pandas-dev/pandas-governance/blob/master/code-of-conduct.md) , which is adapted from the Contributor Covenant, version 1.3.0, available at http://contributor-covenant.org/version/1/3/0/, and the Swift Code of Conduct.
 <!-- #endregion -->
+
+```python
+
+```
