@@ -29,6 +29,3 @@ Please follow the 'Code of conduct' of this project when you make any contributi
 
 Our team would provide you with feedback when we received your contribution within 30 days.
 
-```python
-
-```
