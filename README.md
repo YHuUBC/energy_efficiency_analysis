@@ -74,8 +74,7 @@ The results of the EDA can be found [here](https://github.com/UBC-MDS/energy_eff
 ## Report
 
 The final report can be found
-[here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
-?? need to change url
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/enery_effeciency_report.md).
 
 ## Usage
 
