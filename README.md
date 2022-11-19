@@ -52,7 +52,20 @@ y1 Heating Load
 y2 Cooling Load
 
 ## EDA
-?? update from Yaou
+**Summary of the data set**
+
+The data set used in this exploratory data analysis is retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara '@' gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis '@' gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contains 768 instances and was donated at 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them are attributes(features) and two responses. The authors suggested that the aim of this data set is to use the eight features to predict the two responses. 
+
+**Partition the data set into training and test sub-data sets**
+
+The whole data set were divided into train and test sets, with 70% train data and 30% test data. 
+
+**Exploratory data analysis with the train set**
+
+The exploratory data analysis were conducted through the following steps:
+1.load in the necessary packages and split the data into train and test sets, NaN were dropped;
+2.do EDA on the train set. First to check the data types and see if there are missing values; we found out that there is no missing value. Then we proceed to see the data distribution through bar plots, value_counts, andcorrelations. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' are actually categorical.
+3.From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling and One Hot Encode on the numeric features with Heating Load and Cooling Load as the targets.
 
 ## Report
 
