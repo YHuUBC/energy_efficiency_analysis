@@ -10,7 +10,7 @@ In all forms of collaborative interaction, we strive to provide standard behavio
 The scope of this code of conduct applies both within a project and in public spaces where the members represent the community. The virtual space includes communicating using an official email address or official social media channels. Additionally, this applies to the public and private representation of the community.
 
  
-
+## STANDARDS
 Here are some examples of acceptable behaviors: 
 
 - being considerate of other people's time and effort.
@@ -41,9 +41,9 @@ Project maintainers commit themselves to fairly and consistently applying these 
 ## ENFORCEMENT 
 
 Any incident of harassment or unacceptable behavior can be reported to the team members. 
-- Mehwish
-- Nate
+- Mehwish Nabi
 - Yaou Hu 
+- Nate Puangpanbut
 
 After reviewing the complaint , the project team will take any steps deemed necessary. The privacy of the complaint is to be maintained by the project team.
 
