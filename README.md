@@ -61,8 +61,10 @@ The final report can be found
 ?? need to change url
 
 ## Dependencies
-?? need to update
- 
+
+The Python and Python packages can be found
+[here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
+?? need to change url
 
 ## License
 
