@@ -1,6 +1,6 @@
 
 ## code to train models 
-# 
+# python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file=results/energy_analysis/training_score.png
 #
 """Trains the various models.
 Usage: src/model_predict.py --train_file=<filepath> --test_file=<filepath> --out_file=<out_file>
