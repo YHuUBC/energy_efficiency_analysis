@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - _py-xgboost-mutex=2.0=cpu_0
   - altair=4.2.0=pyhd8ed1ab_1
   - altair_data_server=0.4.1=py_0
   - altair_saver=0.1.0=py_0
@@ -105,6 +106,7 @@ dependencies:
   - libwebp=1.2.4=h328b37c_0
   - libwebp-base=1.2.4=h57fd34a_0
   - libxcb=1.13=h9b22ae9_1004
+  - libxgboost=1.7.1=cpu_h13cf1d8_0
   - libxml2=2.10.3=h87b0503_0
   - libzlib=1.2.13=h03a7124_4
   - lightgbm=3.3.3=py310he38b2b1_1
@@ -145,6 +147,7 @@ dependencies:
   - pthread-stubs=0.4=h27ca646_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
   - pure_eval=0.2.2=pyhd8ed1ab_0
+  - py-xgboost=1.7.1=cpu_py310ha244a38_0
   - pycparser=2.21=pyhd8ed1ab_0
   - pydantic=1.10.2=py310h8e9501a_1
   - pygments=2.13.0=pyhd8ed1ab_0
@@ -249,6 +252,7 @@ dependencies:
     - oauthlib==3.2.2
     - otter-grader==4.2.0
     - pandocfilters==1.5.0
+    - pickle5==0.0.11
     - protobuf==4.21.9
     - pyasn1==0.4.8
     - pyasn1-modules==0.2.8
