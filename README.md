@@ -94,6 +94,9 @@ To run this analysis,
 
     git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
 
+
+    docker run --rm -v /$(pwd):/home/rstudio/breast_cancer_predictor ttimbers/bc_predictor:v4.0 make -C /home/rstudio/breast_cancer_predictor all
+
 2. Navigate to your local repository and prompt the command line and run, 
 
     conda env create --file energy_env.yaml
