@@ -100,7 +100,7 @@ and we will use this as the main environment to run the analysis.
 ## Dependencies
 
 The Python and Python packages can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/modify_readme_file/env-dsci-573.yaml).
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml).
 
 ## License
 
