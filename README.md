@@ -1,7 +1,11 @@
 
 # Energy Efficiency Analysis
 
-Contributors: - Mehwish Nabi - Yaou Hu - Nate Puangpanbut
+Contributors: 
+
+- Mehwish Nabi 
+- Yaou Hu 
+- Nate Puangpanbut
 
 A project studying relationship among some interested features of
 buildings to it's heating and cooling load with various types of
