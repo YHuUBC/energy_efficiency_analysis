@@ -27,12 +27,12 @@ def main(input_file, output_file1, output_file2, output_file3):
     train_df = pd.read_csv(input_file)
 
     # correlation matrix
-    output_file1 = train_df.corr('spearman').style.background_gradient()
+    corr = train_df.corr('spearman').style.background_gradient()
 
     # check the distribution of all variables
     column_list = train_df.columns.tolist()
 
-    output_file2 = alt.Chart(train_df, 
+    distri = alt.Chart(train_df, 
                          title = 'Bar chart of variable distribution'
                         ).mark_bar(opacity = 0.5).encode(
     alt.X (alt.repeat(),
@@ -48,7 +48,7 @@ def main(input_file, output_file1, output_file2, output_file3):
 
     # pairwsie scatter plots
 
-    output_file3 = alt.Chart(train_df,
+    scatter = alt.Chart(train_df,
                     title = 'Pairwise correlations').mark_point(opacity = 0.2,
                                        size = 5).encode(
     alt.X (alt.repeat("row"),
@@ -66,9 +66,9 @@ def main(input_file, output_file1, output_file2, output_file3):
     )
 
     # save charts and table
-    dfi.export(output_file1, 'output_file1.png')
-    output_file2.save('output_file2.png')
-    output_file3.save('output_file3.png')
+    dfi.export(corr, output_file1)
+    distri.save(output_file2)
+    scatter.save(output_file3)
 
 if __name__ == "__main__":
     main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"], opt["<output_file3>"])
