@@ -1,4 +1,4 @@
-# author: Nate Puangpanbut
+# author: Nate Puangpanbut, Mehwish Nabi
 # date: 2022-11-26
 # This code is to read the train data set and performs model fitting with various types of models,
 # select the best model and performs prediction,
@@ -149,16 +149,16 @@ def main(train, test, out1, out2):
     pipe_rf = make_pipeline(StandardScaler(), RandomForestRegressor())
     filename = 'results/model/RF/RandomForest_model.sav'
     pickle.dump(pipe_rf.fit(X_train,y_train), open(filename, 'wb'))
-    
-    
+
+
 if __name__ == "__main__":
      main( opt["--train_file"],opt["--test_file"] , opt["--out_file1"], opt["--out_file2"])
+
     
+
     
+
     
+
     
-    
-    
-    
-    
-    
+
