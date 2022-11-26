@@ -274,4 +274,7 @@ dependencies:
     - webencodings==0.5.1
     - wrapt==1.14.1
     - yarl==1.8.1
+# In _config.yml
+bibtex_bibfiles:
+    - references.bib
 prefix: /opt/miniconda3/envs/energy_env
