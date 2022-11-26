@@ -8,28 +8,19 @@ Contributors:
 - Nate Puangpanbut
 
 A project studying relationship among some interested features of
-buildings to it's heating and cooling load with various types of
+buildings to it's heating load with various types of
 buildings. This project is a group study according to DSCI 522 (Data
 Science workflows); a course in the Master of Data Science program at
 the University of British Columbia, Fall 2022.
 
 ## Project proposal
 
-In this project, we attemp to find important parameters of building that
-affect to the heating and cooling load. We plan to build a number of
-different regression models such as - Linear regression (Ridge, Lasso) -
-Support vector machine - Decision tree - Xgboost - etc .. to predict
-heating and cooling load.
+Building towers or any building structure nowadays is not difficult if you can afford it,
+but building it to be the most memorable and efficient building is another story.
+Considering building new towers or skyscapper buildings, it will great if we know exactly what building parameters relate to its energy efficiency.
+We therefore could be able to design not only the magnificent building to remember but an energy efficient building.
 
-We then aim to find the relationship or contribution of each important
-features to the response by extracting model's coeficients, feature
-importants, or using other explanatory methods such as
-Local-interpretable-model-agnostic-explanations(LIME).
-
-We aim to report both the best model accuracy and its explanation
-factors. The matrix of interest now is Mean absolute error, MAE.
-
-The data set that was used in this project was created by Angeliki
+In this project, we gather simulating data of building heating load versus multiple building features created by Angeliki
 Xifara (angxifara '\@' gmail.com, Civil/Structural Engineer) and was
 processed by Athanasios Tsanas (tsanasthanasis '\@' gmail.com, Oxford
 Centre for Industrial and Applied Mathematics, University of Oxford,
@@ -65,6 +56,30 @@ X8 Glazing Area Distribution
 y1 Heating Load
 
 y2 Cooling Load
+
+
+As a data scientist, we aim to find the relationship or contribution factors of each important
+features corresponding to the heating load. We plan to run multiple machine learing model such as,
+
+- KNN
+
+- Ridge
+
+- Decision Tree
+
+- Support Vector Machine
+
+- Random Forest
+
+- XG Boost
+
+then, selecting the best performed model and analyse for the relationship by either extracting model's coeficients, feature
+importances, or using other explanatory methods such as
+Local-interpretable-model-agnostic-explanations(LIME).
+
+We aim to report both the best model accuracy and its explanation
+factors. The matrix of interest now is Mean absolute error, MAE.
+
 
 ## EDA
 
