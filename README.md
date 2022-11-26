@@ -162,7 +162,7 @@ and we will use this as the main environment to run the analysis.
 
 7.  Running analysis report script
 ```
-    xxx
+    Rscript -e "rmarkdown::render('doc/energy_report_rmd.Rmd', output_format = 'github_document')"
 ```
 
 ## Dependencies
