@@ -75,7 +75,7 @@ importances, or using other explanatory methods such as
 Local-interpretable-model-agnostic-explanations(LIME).
 
 We aim to report both the best model accuracy and its explanation
-factors. The matrix of interest now is Mean absolute error, MAE.
+factors. The matrix of interest now is R2.
 
 
 ## EDA
