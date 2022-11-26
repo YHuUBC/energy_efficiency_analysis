@@ -88,14 +88,39 @@ The final report can be found
 
 ## Usage
 
-To run this analysis, clone this project repository to your local,
-prompt the command line and change directory to the project folder,
-and run, 
+To run this analysis, 
 
-    conda env create --file env-dsci-573.yaml
+1. Clone this project repository to your local.
 
-The new environment env-dsci-573 will be created in your conda environment,
+    git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
+
+2. Navigate to your local repository and prompt the command line and run, 
+
+    conda env create --file energy_env.yaml
+
+The new environment energy_env will be created in your conda environment,
 and we will use this as the main environment to run the analysis.
+
+3. Running download data script.
+
+    python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx  --out_file=data/raw/ENB2012_data.csv
+
+4. Running data pre-processing script.
+
+    python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv
+    
+5. Running EDA script.
+
+    python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
+    
+6. Running model fitting and prediction script.
+
+    python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png
+    
+7. Running analysis report script
+
+    xxx
+
 
 ## Dependencies
 
