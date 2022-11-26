@@ -1,6 +1,7 @@
 # python src/eda_script_plots_as_image.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter_plot.png
 """Reads train data set from the processed script and performs explanatory data analysis, 
 It reads in the data, do exploratory data analysis and save the results as three png files.
+It is supposed to work across systems.
 Usage: src/data_processing.py <input_file> <output_file1> <output_file2> <output_file3>
 
 Options:
