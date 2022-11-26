@@ -40,6 +40,7 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
 
     # check the distribution of all variables
     column_list = train_df.columns.tolist()
+    feats = ['Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', 'Glazing Area Distribution']
 
     distri = alt.Chart(train_df, 
                          title = 'Bar chart of variable distribution'
@@ -49,42 +50,44 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
           bin = alt.Bin(maxbins = 45)),
     alt.Y('count()', stack = None),
     tooltip = 'count()'
-    ).properties(width = 150,
-            height = 150).repeat(
+    ).properties(width = 300,
+            height = 300).repeat(
     repeat = column_list,
-    columns = 2)
+    columns = 3)
 
 
     # pairwsie scatter plots
 
     scatter1 = alt.Chart(train_df,
-                    title = 'Pairwise correlations with heating load').mark_point(opacity = 0.2,
+                    title = 'Feature correlates with heating load').mark_point(opacity = 0.2,
                                        size = 5).encode(
-    alt.X (alt.repeat("row"),
+    alt.X (alt.repeat(),
            type = 'quantitative',
            scale = alt.Scale(zero = False)),
     alt.Y('Heating Load',
           scale = alt.Scale(zero = False))
     ).properties(
-    width = 120,
-    height = 120
+    width = 300,
+    height = 300
     ).repeat(
-    row = column_list
+    repeat = feats,
+        columns = 3
     )
 
     scatter2 = alt.Chart(train_df,
-                    title = 'Pairwise correlations with cooling load').mark_point(opacity = 0.2,
+                    title = 'Feature correlates with cooling load').mark_point(opacity = 0.2,
                                        size = 5).encode(
-    alt.X (alt.repeat("row"),
+    alt.X (alt.repeat(),
            type = 'quantitative',
            scale = alt.Scale(zero = False)),
     alt.Y('Cooling Load',
           scale = alt.Scale(zero = False))
     ).properties(
-    width = 120,
-    height = 120
+    width = 300,
+    height = 300
     ).repeat(
-    row = column_list
+    repeat = feats,
+        columns = 3
     )
  
     # cited from Joel Ostblom @UBC MDS
