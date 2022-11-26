@@ -131,32 +131,22 @@ analysis.
 
 3.  Running download data script.
 ```
-    python src/download_data.py
-    --url=<http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx>
-    --out_file=data/raw/ENB2012_data.csv
+    python src/download_data.py --url=<http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx> --out_file=data/raw/ENB2012_data.csv
 ```
 
 4.  Running data pre-processing script.
 ```
-    python src/data_preprocess.py
-    data/processed/energy_effeciency_processed.csv
-    data/processed/train_df.csv data/processed/test_df.csv
+    python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv
 ```
 
 5.  Running EDA script.
 ```
-    python src/eda_script_plots_update.py data/processed/train_df.csv
-    results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png
-    results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
+    python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
 ```
 
 6.  Running model fitting and prediction script.
 ```
-    python src/model_predict.py
-    --train_file='data/processed/train_df.csv'
-    --test_file='data/processed/test_df.csv'
-    --out_file1=results/energy_analysis/training_score.png
-    --out_file2=results/energy_analysis/prediction.png
+    python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png
 ```
 
 7.  Running analysis report script
