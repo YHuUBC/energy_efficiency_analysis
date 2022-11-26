@@ -73,24 +73,19 @@ def main(train, test, out1, out2):
     
     # prediction
     y_pred = pipe_xgb.predict(X_test)
-    # prediction = pd.DataFrame(y_pred, y_test)
-    prediction = {'Predicted': y_pred,
-        'Actual': y_test}
-    prediction_df = pd.DataFrame(prediction)
-    prediction_df['Sample'] = prediction_df.index
+    
+    prediction_dict = {'response': list(y_pred)+list(y_test),
+                      'type': ['Predicted']*len(y_pred)+['Actual']*len(y_pred),
+                      'sample': list(range(1,len(y_pred)+1))+list(range(1,len(y_pred)+1))}
+    prediction_df = pd.DataFrame(prediction_dict)
     
     # plot
-    point1 = alt.Chart(prediction_df,
+    point = alt.Chart(prediction_df,
                     title = 'Comparison of Prediction and Actual value on test data').mark_point().encode(
-        y = alt.Y('Predicted',type = 'quantitative', scale = alt.Scale(zero = False)),
-        x = 'Sample'
-    )
-    point2 = alt.Chart(prediction_df,
-                    title = 'Comparison of Prediction and Actual value on test data').mark_point().encode(
-        y = alt.Y('Actual',type = 'quantitative', scale = alt.Scale(zero = False)),
-        x = 'Sample',
-        color = alt.value("#FFAA00")
-    )
+        y = alt.Y('response',type = 'quantitative', scale = alt.Scale(zero = False), title='Heating load'),
+        x = alt.X('sample', title='Sample / Observations'),
+        color = 'type'
+    ).properties(height=300,width=300)
     
     # cited from Joel Ostblom @UBC MDS
     def save_chart(chart, filename, scale_factor=1):
@@ -120,7 +115,7 @@ def main(train, test, out1, out2):
     dfi.export(result_df, out1)
     
     # save predicted plot
-    save_chart(point1+point2, out2, 2)
+    save_chart(point, out2, 2)
     
     # save the final model
     filename = 'results/model/final_model/final_model.sav'
