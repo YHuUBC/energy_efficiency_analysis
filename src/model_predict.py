@@ -1,7 +1,11 @@
-
-## code to train models 
+# author: Nate Puangpanbut
+# date: 2022-11-26
+# This code is to read the train data set and performs model fitting with various types of models,
+# select the best model and performs prediction,
+# finally, saving figures of cv-score comparision and best prediction on privided destination folder,
+# also, save all modles as pickle file to result/model folder
+# example :
 # python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png
-#
 """Trains the various models.
 Usage: src/model_predict.py --train_file=<filepath> --test_file=<filepath> --out_file1=<out_file1> --out_file2=<out_file2>
 Options:

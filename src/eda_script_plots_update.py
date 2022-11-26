@@ -1,3 +1,7 @@
+# author: Yaou Hu
+# date: 2022-11-26
+# This code is to read the train data set and performs explanatory data analysis and finally save to provided destination folder
+# example :
 # python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
 """Reads train data set from the processed script and performs explanatory data analysis, 
 It reads in the data, do exploratory data analysis and save the results as four png files.

@@ -1,3 +1,8 @@
+# author: Yaou Hu
+# date: 2022-11-26
+# This code is to csv data and performs data cleaning, pre-processingm, then
+# separating into train and test data sets, and finally save to provided destination folder.
+# example :
 # python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv
 """Reads data from the download script and performs data cleaning/pre-processing, 
 transforming, and/or partionting that needs to happen before exploratory data analysis or modeling takes place.

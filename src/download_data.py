@@ -1,9 +1,9 @@
 # +
-# author: Tiffany Timbers
-# date: 2019-12-18
-## code to download
-# python src/download_data.py --url='http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx' 
-#--out_file=data/raw/ENB2012_data.csv
+# author: Mehwish Nabi
+# date: 2022-11-26
+# This code is to download original raw file data from UCI ML databses and convert it to csv file and finally save to provided destination folder
+# example :
+# python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx  --out_file=data/raw/ENB2012_data.csv
 """Downloads data excel data from the web to a local filepath in excel file format.
 Usage: src/down_data.py  --url=<url> --out_file=<out_file>
 Options:
