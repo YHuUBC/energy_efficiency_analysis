@@ -55,71 +55,38 @@ y1 Heating Load
 y2 Cooling Load
 
 
-As a data scientist, we aim to find the relationship or contribution factors of each important
-features corresponding to the heating load. We plan to run multiple machine learning model such as,
+**Research question**
 
-- KNN
-
-- Ridge
-
-- Decision Tree
-
-- Support Vector Machine
-
-- Random Forest
-
-- XG Boost
-
-then, selecting the best performed model and analyse for the relationship by either extracting model's coeficients, feature
-importances, or using other explanatory methods such as
-Local-interpretable-model-agnostic-explanations(LIME).
-
-We aim to report both the best model accuracy and its explanation
-factors. The matrix of interest now is R2.
+Among the variables 'Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' of residential buildings, which ones would predict the 'Heating Load' of the building? How important would each feature be in predicting the 'Heating Load' of the building?**
 
 
 ## EDA
 
 **Summary of the data set**
 
-This data set contains 768 instances and was donated at 2012-11-30. It
-has no missing values. It has a total of 10 variables, with 8 of them
-are attributes(features) and two responses. The authors suggested that
-the aim of this data set is to use the eight features to predict the two
-responses.
+The data set used in this exploratory data analysis is retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis '@' gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes(features) and two responses. The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
 
 **Partition the data set into training and test sub-data sets**
 
-The whole data set were divided into train and test sets, with 70% train
-data and 30% test data.
+The data set was divided into train and test sets, with 70% train data and 30% test data.
 
 **Exploratory data analysis with the train set**
 
-The exploratory data analysis were conducted through the following
-steps: 1.load in the necessary packages and split the data into train
-and test sets, NaN were dropped;
+The exploratory data analysis was conducted through the following steps:
 
-2.do EDA on the train set. First to check the data types and see if
-there are missing values; we found out that there is no missing value.
-Then we proceed to see the data distribution through bar plots,
-value_counts, correlations, and pairwise scatter plots. Through the EDA,
-we could identify that all the variables are numeric type, but Roof
-Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation',
-'Glazing Area', and 'Glazing Area Distribution' are actually
-categorical.
+1. load in the necessary packages and split the data into train and test sets. NaN data were dropped;
 
-3.From the above analysis, we may proceed to do a supervised machine
-learning model with data preprocessed by Standard Scaling and One Hot
-Encode on the numeric features with Heating Load and Cooling Load as the
-targets.
+2. do EDA on the train set. First, to check the data types and see if there were missing values, we found out that there were no missing values. Then we see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' could be categorical.
+
+3. From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling and One Hot Encode on the numeric features with Heating Load and Cooling Load as the targets.
 
 The results of the EDA can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/src/energy_efficiency_eda.ipynb).
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
 
 ## Report
 
 The final report can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_efficiency_report.ipynb).
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_report_rmd.Rmd). An alternative ipynb file can be found [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_efficiency_report.ipynb).
 
 ## Usage
 
