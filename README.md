@@ -84,7 +84,7 @@ The results of the EDA can be found [here](https://github.com/UBC-MDS/energy_eff
 ## Report
 
 The final report can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/enery_effeciency_report.md).
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_efficiency_report.ipynb).
 
 ## Usage
 
