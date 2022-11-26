@@ -18,7 +18,7 @@ the University of British Columbia, Fall 2022.
 Building towers or any building structure nowadays is not difficult if you can afford it,
 but building it to be the most memorable and efficient building is another story.
 Considering building new towers or skyscapper buildings, it will great if we know exactly what building parameters relate to its energy efficiency.
-We therefore could be able to design not only the magnificent building to remember but an energy efficient building.
+We therefore could be able to design not only the magnificent building to remember but an energy efficient building to be renowned.
 
 In this project, we gather simulating data of building heating load versus multiple building features created by Angeliki
 Xifara (angxifara '\@' gmail.com, Civil/Structural Engineer) and was
@@ -30,10 +30,7 @@ can be found
 specifically [this
 file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/).
 
-Each row in the data set represents interested features of building
-heating and cooling load from the afore-mentioned characteristics
-simulation (e.g., Relative Compactness, Surface Area, Wall Area, etc..),
-including the response (e.g., Heating Load, Cooling Load).
+The data set contains 12 different building shapes simulated in Ecotect. The buildings differ with respect to the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Simulated various settings as functions of the afore-mentioned characteristics to obtain 768 building shapes. The dataset comprises 768 samples and 8 features, aiming to predict two real valued responses.
 
 Specifically:
 
@@ -59,7 +56,7 @@ y2 Cooling Load
 
 
 As a data scientist, we aim to find the relationship or contribution factors of each important
-features corresponding to the heating load. We plan to run multiple machine learing model such as,
+features corresponding to the heating load. We plan to run multiple machine learning model such as,
 
 - KNN
 
