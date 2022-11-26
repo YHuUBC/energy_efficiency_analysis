@@ -117,24 +117,25 @@ To run this analysis,
 1.  Clone this project repository to your local.
 
 ```{=html}
-<!-- -->
+    git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
 ```
-        git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
 
 2.  Navigate to your local repository and prompt the command line and
     run,
-
+```
     conda env create --file energy_env.yaml
+```
 
 The new environment energy_env will be created in your conda
 environment, and we will use this as the main environment to run the
 analysis.
 
 3.  Running download data script.
-
+```
     python src/download_data.py
     --url=<http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx>
     --out_file=data/raw/ENB2012_data.csv
+```
 
 4.  Running data pre-processing script.
 
