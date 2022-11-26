@@ -53,7 +53,7 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
     ).properties(width = 300,
             height = 300).repeat(
     repeat = column_list,
-    columns = 3)
+    columns = 2)
 
 
     # pairwsie scatter plots
@@ -71,7 +71,7 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
     height = 300
     ).repeat(
     repeat = feats,
-        columns = 3
+        columns = 2
     )
 
     scatter2 = alt.Chart(train_df,
@@ -87,7 +87,7 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
     height = 300
     ).repeat(
     repeat = feats,
-        columns = 3
+        columns = 2
     )
  
     # cited from Joel Ostblom @UBC MDS
