@@ -131,7 +131,7 @@ analysis.
 
 3.  Running download data script.
 ```
-    python src/download_data.py --url=<http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx> --out_file=data/raw/ENB2012_data.csv
+    python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx --out_file=data/raw/ENB2012_data.csv
 ```
 
 4.  Running data pre-processing script.
