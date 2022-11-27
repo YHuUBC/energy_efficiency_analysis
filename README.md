@@ -74,9 +74,9 @@ The exploratory data analysis was conducted through the following steps:
 
 1. Load in the necessary packages and split the data into train and test sets. NaNs data were dropped;
 
-2. Do EDA on the train set. First, we checked the data types to see if there were any missing values, and there were none. Then we see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' could be categorical.
+2. Do EDA on the train set. First, we checked the data types to see if there were any missing values, and there were none. Then we see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric.
 
-3. From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling as the numeric features with Heating Load and Cooling Load as the targets.
+3. From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling as the numeric features with Heating Load as target.
 
 The results of the EDA can be found
 [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
@@ -89,7 +89,9 @@ We split the data set into train and test data sets with 70:30 ratio. An EDA is 
 - Decision Tree
 - Support Vector Machine
 - Random Forest
-- XG BoostEach model is fitted with the same transformation and pipeline and is reported as the mean and standard deviation of the cross-validation score. The best cross-validation score model is selected to be the final model to perform prediction on test data to see how it fits and performs. Finally, all the models are saved as pickled files.
+- XG Boost
+
+Each model is fitted with the same transformation and pipeline and is reported as the mean and standard deviation of the cross-validation score. The best cross-validation score model is selected to be the final model to perform prediction on test data to see how it fits and performs. Finally, all the models are saved as pickled files.
 
 ## Report
 
@@ -182,3 +184,7 @@ tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
 [5] Tsanas, Athanasios, and Angeliki Xifara. 2012. “Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools.” Energy and Buildings 49: 560–67.
 
 [6] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
+
+```python
+
+```
