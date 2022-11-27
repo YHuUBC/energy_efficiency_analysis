@@ -26,7 +26,7 @@ can be found
 specifically [this
 file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/).
 
-The data set contains 12 different building shapes simulated in Ecotect. The buildings differ in the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Various settings were simulated as functions of the aforementioned characteristics to obtain 768 building shapes. The  data set comprises 768 samples and eight features, aiming to predict real-valued response and to check contribution level of each feature to the 'Heating Load' of the building.
+The data set contains 12 different building shapes simulated in Ecotect. The buildings differ in the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Various settings were simulated as functions of the aforementioned characteristics to obtain 768 building shapes. The  data set comprises 768 samples and eight features.
 
 Specifically:
 
@@ -53,7 +53,7 @@ y2 Cooling Load
 
 **Research question**
 
-Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? What contribution level of each feature to the 'Heating Load' of the building?
+Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? And to check contribution level of each feature to the 'Heating Load' of the building.
 
 <!-- #region -->
 ## Analysis
@@ -169,19 +169,15 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
 # References
 
-[1] A. Tsanas, A. Xifara: 'Accurate quantitative estimation of energy
-performance of residential buildings using statistical machine learning
-tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
+[1] Harris, Charles R., K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, et al. 2020. “Array Programming with NumPy.” Nature 585 (7825): 357–62. https://doi.org/10.1038/s41586-020-2649-2.
 
-[2] Harris, Charles R., K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, et al. 2020. “Array Programming with NumPy.” Nature 585 (7825): 357–62. https://doi.org/10.1038/s41586-020-2649-2.
+[2] Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, et al. 2011. “Scikit-Learn: Machine Learning in Python.” Journal of Machine Learning Research 12: 2825–30.
 
-[3] Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, et al. 2011. “Scikit-Learn: Machine Learning in Python.” Journal of Machine Learning Research 12: 2825–30.
+[3] The pandas development. 2020. Pandas-Dev/Pandas: Pandas (version latest). Zenodo. https://doi.org/10.5281/zenodo.3509134.
 
-[4] The pandas development. 2020. Pandas-Dev/Pandas: Pandas (version latest). Zenodo. https://doi.org/10.5281/zenodo.3509134.
+[4] Tsanas, Athanasios, and Angeliki Xifara. 2012. “Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools.” Energy and Buildings 49: 560–67.
 
-[5] Tsanas, Athanasios, and Angeliki Xifara. 2012. “Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools.” Energy and Buildings 49: 560–67.
-
-[6] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
+[5] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
 <!-- #endregion -->
 
 ```python
