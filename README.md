@@ -7,18 +7,16 @@ Contributors:
 - Yaou Hu 
 - Nate Puangpanbut
 
-A project studying relationship among some interested features of
-buildings to it's heating load with various types of
-buildings. This project is a group study according to DSCI 522 (Data
+A project to predict the heating load of various types of
+buildings and to investigate the role of features in heating load prediction. This project is a group study according to DSCI 522 (Data
 Science workflows); a course in the Master of Data Science program at
 the University of British Columbia, Fall 2022.
 
 ## Project proposal
 
 Building towers or any building structure nowadays is not difficult if you can afford it,
-but building it to be the most memorable and efficient building is another story.
-Considering building new towers or skyscapper buildings, it will great if we know exactly what building parameters relate to its energy efficiency.
-We therefore could be able to design not only the magnificent building to remember but an energy efficient building to be renowned.
+But building it to be the most memorable and efficient is another story.
+When considering building new towers or skyscraper buildings, it will be great if we know exactly what building parameters relate to their energy efficiency.As a result, we would be able to design not only a magnificent building to remember, but also a renowned energy-efficient building. 
 
 In this project, we gather simulating data of building heating load versus multiple building features created by Angeliki
 Xifara (angxifara '\@' gmail.com, Civil/Structural Engineer) and was
@@ -30,7 +28,7 @@ can be found
 specifically [this
 file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/).
 
-The data set contains 12 different building shapes simulated in Ecotect. The buildings differ with respect to the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Simulated various settings as functions of the afore-mentioned characteristics to obtain 768 building shapes. The dataset comprises 768 samples and 8 features, aiming to predict two real valued responses.
+The data set contains 12 different building shapes simulated in Ecotect. The buildings differ in the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Various settings were simulated as functions of the aforementioned characteristics to obtain 768 building shapes. The  data set comprises 768 samples and eight features, aiming to predict two real-valued responses.
 
 Specifically:
 
@@ -57,13 +55,14 @@ y2 Cooling Load
 
 **Research question**
 
-Among the variables 'Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' of residential buildings, which ones would predict the 'Heating Load' of a residential building?
+Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? What contribution level of each feature to the 'Heating Load' of the building?
+
 
 ## EDA
 
 **Summary of the data set**
 
-The data set used in this exploratory data analysis is retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis@gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes(features) and two responses.The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
+The data set used in this exploratory data analysis was retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, civil/structural engineer) and processed by Athanasios Tsanas (tsanasthanasis@gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes (features) and two responses. The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
 
 **Partition the data set into training and test sub-data sets**
 
@@ -73,14 +72,26 @@ The data set was divided into train and test sets, with 70% train data and 30% t
 
 The exploratory data analysis was conducted through the following steps:
 
-1. load in the necessary packages and split the data into train and test sets. NaN data were dropped;
+1. Load in the necessary packages and split the data into train and test sets. NaNs data were dropped;
 
-2. do EDA on the train set. First, to check the data types and see if there were missing values, we found out that there were no missing values. Then we see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric type, but Roof Area', 'Surface Area', 'Wall Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' could be categorical.
+2. Do EDA on the train set. First, we checked the data types to see if there were any missing values, and there were none. Then we see the data distribution through bar plots, value_counts, correlations, and pairwise scatter plots. Through the EDA, we could identify that all the variables are numeric.
 
-3. From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling and One Hot Encode on the numeric features with Heating Load and Cooling Load as the targets.
+3. From the above analysis, we may proceed to do a supervised machine learning model with data preprocessed by Standard Scaling as the numeric features with Heating Load as target.
 
 The results of the EDA can be found
 [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
+
+## Analysis
+
+We split the data set into train and test data sets with 70:30 ratio. An EDA is performed to reveal the distribution and relationship among the features to the response. The result of EDA and its correlation coefficient map is analyzed to reduce some unnecessary features. The modeling fitting is performed with various types of models such as
+- KNN
+- Ridge
+- Decision Tree
+- Support Vector Machine
+- Random Forest
+- XG Boost
+
+Each model is fitted with the same transformation and pipeline and is reported as the mean and standard deviation of the cross-validation score. The best cross-validation score model is selected to be the final model to perform prediction on test data to see how it fits and performs. Finally, all the models are saved as pickled files.
 
 ## Report
 
@@ -103,7 +114,7 @@ To run this analysis,
     conda env create --file energy_env.yaml
 ```
 
-The new environment energy_env will be created in your conda environment, 
+In your conda environment, a new environment called energy_env will be created.
 and we will use this as the main environment to run the analysis.
 
 3.  Running download data script to download data and convert it to csv file.
@@ -111,7 +122,7 @@ and we will use this as the main environment to run the analysis.
     python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx --out_file=data/raw/ENB2012_data.csv
 ```
 
-4.  Running data pre-processing script to perform data pre-processing and saving split train and test data set.
+4.  Running data pre-processing script to perform data pre-processing and save split train and test data sets.
 ```
     python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv
 ```
@@ -144,21 +155,19 @@ Puangpanbut
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
+without limitation, the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the software, and to
+allow those to whom the software is provided to do so, subject to
 the following conditions:
-
 The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
+in all copies or substantial portions of the software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT ANY EXPRESS OR IMPLIED WARRANTY.INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
 # References
 
@@ -175,3 +184,7 @@ tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
 [5] Tsanas, Athanasios, and Angeliki Xifara. 2012. “Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools.” Energy and Buildings 49: 560–67.
 
 [6] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
+
+```python
+
+```
