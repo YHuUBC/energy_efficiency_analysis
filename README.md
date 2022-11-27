@@ -57,12 +57,9 @@ y2 Cooling Load
 
 Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? What contribution level of each feature to the 'Heating Load' of the building?
 
-
+<!-- #region -->
 ## EDA
 
-**Summary of the data set**
-
-The data set used in this exploratory data analysis was retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, civil/structural engineer) and processed by Athanasios Tsanas (tsanasthanasis@gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes (features) and two responses. The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
 
 **Partition the data set into training and test sub-data sets**
 
@@ -184,6 +181,7 @@ tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
 [5] Tsanas, Athanasios, and Angeliki Xifara. 2012. “Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools.” Energy and Buildings 49: 560–67.
 
 [6] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
+<!-- #endregion -->
 
 ```python
 
