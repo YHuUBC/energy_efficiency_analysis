@@ -738,20 +738,20 @@ project</h2>
 <p>SKlearn(Pedregosa et al. 2011)</p>
 <h2 id="exploratory-data-analysis-with-the-train-set">Exploratory data
 analysis with the train set</h2>
-<p>The exploratory data analysis were conducted through the following
+<p>The exploratory data analysis was conducted through the following
 steps:</p>
-<p>1.load in the necessary packages and split the data into train and
-test sets, NaN were dropped;</p>
-<p>2.do EDA on the train set. First to check the data types and see if
-there are missing values; we found out that there is no missing value.
-Then we proceed to see the data distribution through bar plots,
+<ol style="list-style-type: decimal">
+<li><p>Load the necessary packages and split the data into train and
+test sets. NaN data were dropped;</p></li>
+<li><p>do EDA on the train set. First, to check the data types and see
+if there were missing values, we found out that there were no missing
+values. Then we see the data distribution through bar plots,
 value_counts, correlations, and pairwise scatter plots. Through the EDA,
-we could identify that all the variables are numeric type, but Roof
-Area’, ‘Surface Area’, ‘Wall Area’, ‘Overall Height’, ‘Orientation’,
-‘Glazing Area’, and ‘Glazing Area Distribution’ are actually
-categorical.</p>
-<p>3.From the above analysis, we may proceed to do a supervised machine
-learning model with Heating Load and/or Cooling Load as the targets.</p>
+we could identify that all the variables are numeric.</p></li>
+<li><p>From the above analysis, we proceeded to do a supervised machine
+learning model with data preprocessed by Standard Scaling on the numeric
+features with Heating Load as the target.</p></li>
+</ol>
 <p><strong>NOTE: Data preprocessing can be conducted using
 ‘data_preprocess.py’ in the energy_efficiency_analysis/src
 folder</strong></p>
