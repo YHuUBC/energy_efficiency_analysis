@@ -58,6 +58,19 @@ y2 Cooling Load
 Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? What contribution level of each feature to the 'Heating Load' of the building?
 
 <!-- #region -->
+## Analysis
+
+We split the data set into train and test data sets with 70:30 ratio. An EDA is performed to reveal the distribution and relationship among the features to the response. The result of EDA and its correlation coefficient map is analyzed to reduce some unnecessary features. The modeling fitting is performed with various types of models such as
+- KNN
+- Ridge
+- Decision Tree
+- Support Vector Machine
+- Random Forest
+- XG Boost
+
+Each model is fitted with the same transformation and pipeline and is reported as the mean and standard deviation of the cross-validation score. The best cross-validation score model is selected to be the final model to perform prediction on test data to see how it fits and performs. Finally, all the models are saved as pickled files.
+
+
 ## EDA
 
 
@@ -78,17 +91,7 @@ The exploratory data analysis was conducted through the following steps:
 The results of the EDA can be found
 [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
 
-## Analysis
 
-We split the data set into train and test data sets with 70:30 ratio. An EDA is performed to reveal the distribution and relationship among the features to the response. The result of EDA and its correlation coefficient map is analyzed to reduce some unnecessary features. The modeling fitting is performed with various types of models such as
-- KNN
-- Ridge
-- Decision Tree
-- Support Vector Machine
-- Random Forest
-- XG Boost
-
-Each model is fitted with the same transformation and pipeline and is reported as the mean and standard deviation of the cross-validation score. The best cross-validation score model is selected to be the final model to perform prediction on test data to see how it fits and performs. Finally, all the models are saved as pickled files.
 
 ## Report
 
