@@ -51,7 +51,7 @@ y1 Heating Load
 y2 Cooling Load
 
 
-**Research question**
+## Research question
 
 Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? And to check contribution level of each feature to the 'Heating Load' of the building.
 
@@ -180,6 +180,3 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 [5] VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
 <!-- #endregion -->
 
-```python
-
-```

@@ -112,18 +112,30 @@ python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/ed
 In this analysis, the heat load is predicted using the features Relative Compactness, Surface Area, Wall Area, Roof Area, Overall Height, Orientation,Glazing Area, Glazing Area Distribution.
 
 The steps involved are as :
+
  - loading the train_df.csv and test_df.csv dataset created by the data_preprocess.py script
+ 
  - the train and test data sets are then splitting the data into X_train and y_train based on the feature to be predicted i.e , heating load
+ 
  - the models are trained on the X_train and y_train 
+ 
  - the models are saved using pickle.
+ 
  - Predictions are made on test data using the model that has highest cross validation score 
+ 
 
 The models used for the training and predictions of the data are :
+
 - KNN
+
 - Ridge
+
 - Decision Tree
+
 - Support Vector Machine
+
 - Random Forest
+
 - XG Boost
 
 The training and cross validation scores of the models are in the below table:
