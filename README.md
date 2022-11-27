@@ -14,9 +14,7 @@ the University of British Columbia, Fall 2022.
 
 ## Project proposal
 
-Building towers or any building structure nowadays is not difficult if you can afford it,
-But building it to be the most memorable and efficient is another story.
-When considering building new towers or skyscraper buildings, it will be great if we know exactly what building parameters relate to their energy efficiency.As a result, we would be able to design not only a magnificent building to remember, but also a renowned energy-efficient building. 
+Building towers or any building structure nowadays is not difficult if you can afford it, but building it to be the most memorable and efficient is another story. When considering building new towers or skyscraper buildings, it will be great if we know exactly what building parameters relate to their energy efficiency. As a result, we would be able to design not only a magnificent building to remember but also a renowned energy-efficient building. 
 
 In this project, we gather simulating data of building heating load versus multiple building features created by Angeliki
 Xifara (angxifara '\@' gmail.com, Civil/Structural Engineer) and was
