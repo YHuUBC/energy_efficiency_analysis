@@ -26,7 +26,7 @@ can be found
 specifically [this
 file](http://archive.ics.uci.edu/ml/machine-learning-databases/00242/).
 
-The data set contains 12 different building shapes simulated in Ecotect. The buildings differ in the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Various settings were simulated as functions of the aforementioned characteristics to obtain 768 building shapes. The  data set comprises 768 samples and eight features, aiming to predict two real-valued responses.
+The data set contains 12 different building shapes simulated in Ecotect. The buildings differ in the glazing area, the glazing area distribution, and the orientation, amongst other parameters. Various settings were simulated as functions of the aforementioned characteristics to obtain 768 building shapes. The  data set comprises 768 samples and eight features, aiming to predict real-valued response and to check contribution level of each feature to the 'Heating Load' of the building.
 
 Specifically:
 
