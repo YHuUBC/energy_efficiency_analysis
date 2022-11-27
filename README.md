@@ -57,14 +57,13 @@ y2 Cooling Load
 
 **Research question**
 
-Among the variables 'Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' of residential buildings, which ones would predict the 'Heating Load' of the building? How important would each feature be in predicting the 'Heating Load' of the building?**
-
+Among the variables 'Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution' of residential buildings, which ones would predict the 'Heating Load' of a residential building?
 
 ## EDA
 
 **Summary of the data set**
 
-The data set used in this exploratory data analysis is retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis '@' gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes(features) and two responses. The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
+The data set used in this exploratory data analysis is retrieved from "http://archive.ics.uci.edu/ml/datasets/Energy+efficiency#". It was contributed by Angeliki Xifara (angxifara@gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis@gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contained 768 instances and was donated on 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them being attributes(features) and two responses.The authors suggested that this data set aims to use the eight features to predict the two responses. We decided to use the features to predict one response, the 'heating load'.
 
 **Partition the data set into training and test sub-data sets**
 
