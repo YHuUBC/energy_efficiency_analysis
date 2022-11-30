@@ -122,12 +122,11 @@ python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning
 
 4.  Running data pre-processing script to perform data pre-processing and save split train and test data sets.
 ```
-python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv
-```
+python src/data_preprocess.py data/raw/ENB2012_data.csv data/processed/train_df.csv data/processed/test_df.csv```
 
 5.  Running EDA script to generate EDA result from train data set.
 ```
-python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
+python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png
 ```
 
 6.  Running model fitting and prediction script to fit model, generate prediction, and save all models as pickle file.
