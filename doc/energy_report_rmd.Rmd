@@ -7,11 +7,9 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = here::here())
-library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
-library(reticulate)
+library(tidyverse)
 
 ```
 
@@ -19,6 +17,8 @@ library(reticulate)
 
 The data set used in this project is retrieved from Tsanas and Xifara (2012). It was contributed by Angeliki Xifara (Civil/Structural Engineer) and was processed by Athanasios Tsanas (Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contains 768 instances and was donated at 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them are attributes(features) and two responses. The authors suggested that the aim of this data set is to use the eight features to predict the two responses. These variables are shown in the table below:
 
+
+**Table 1. Variables in the data set**
 ```{r variables in the data set table, echo=FALSE}
 variable <- c('X1','X2','X3','X4','X5','X6','X7','X8','y1','y2')
 description <- c('Relative Compactness',
@@ -34,13 +34,12 @@ description <- c('Relative Compactness',
 table1 <- tibble(variable,
                  description)
 
-knitr::kable( table1, 
-              caption = "Table 1. Variables in the data set")
+kable( table1) 
 ```
 
 ## Research question
 
-**How important would each feature be in predicting the 'Heating Load' of the building? What contribution level of each feature to the 'Heating Load' of the building?**
+**Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? And to check contribution level of each feature to the 'Heating Load' of the building.**
 
 ## Download data
 
@@ -61,15 +60,19 @@ separating into train and test data sets, and finally save to provided destinati
 example :
 python src/data_preprocess.py data/processed/energy_effeciency_processed.csv data/processed/train_df.csv data/processed/test_df.csv'
 
-```{r data partition table, echo=FALSE}
+
+**Table 2. Partition of the data set**
+```{r data partition, echo=FALSE}
 cases <- c(537, 231)
 subdataset <- c('Trainset',
                  'Test set')
-table2 <- tibble(cases,
-                 subdataset)
+table2 <- tibble(cases,subdataset)
 
-knitr::kable(table2, 
-              caption = "Table 2. Partition of the data set")
+```
+
+
+```{r data partition table, echo=FALSE}
+kable(table2) 
 ```
 
 ## Packages utilized in this project
@@ -93,12 +96,18 @@ The exploratory data analysis was conducted through the following steps:
 
 **NOTE: Data preprocessing can be conducted using 'data_preprocess.py' in the energy_efficiency_analysis/src folder**
 
-Isles:
+
+
+**Figure 1. Correlations among the varibles in this study**
 ![alt tag](../results/eda/eda_corr_table.png)
 
-Isles:
+
+
+**Figure 2. Variable distribution chart**
 ![alt tag](../results/eda/eda_distribution_plot.png)
-Isles:
+
+
+**Figure 3. Scatter plot of variables of interest**
 ![alt tag](../results/eda/eda_scatter1_plot.png)
 
 **NOTE: The EDA can be conducted using 'eda_script_plots_update.py' in the energy_efficiency_analysis/src folder:**
@@ -140,7 +149,9 @@ The models used for the training and predictions of the data are :
 
 The training and cross validation scores of the models are in the below table:
 
-Isles:
+
+
+**Figure 4. The training and cross validation scores of the models**
 ![alt tag](../results/energy_analysis/training_score.png)
 
 
@@ -152,15 +163,17 @@ The training and test scores do not have  huge difference so the models are not 
 
 The graphical representation of the actual and predicted values in the test data set  by the XGBoost is as below. It can be observed that predicted values by the model have little to no deviation from the actual values. 
 
-Isles:
+
+
+**Figure 5. Comparison of prediction and actual value on test data**
 ![alt tag](../results/energy_analysis/prediction.png)
 
 **NOTE: The above mentioned  modelling and analysis can be conducted using 'model_predict.py' in the energy_efficiency_analysis/src folder**
 
 'This code is to read the train data set and performs model fitting with various types of models,
 select the best model and performs prediction,
-finally, saving figures of cv-score comparision and best prediction on privided destination folder,
-also, save all modles as pickle file to result/model folder
+finally, saving figures of cv-score comparison and best prediction on provided destination folder,
+also, save all models as pickle file to result/model folder
 example :
 python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png'
 
