@@ -22,7 +22,7 @@ Please read the following outlines if you want to propose a change.
 
 Install the environment used for our project on your local machine. Find the environment [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml).
 
-Please fork our [energy efficiency project repository] (https://github.com/UBC-MDS/energy_efficiency_analysis) on GitHub and clone the for to your local machine. For more details on how to for a repository, see this GitHub [Documentation](https://help.github.com/en/articles/fork-a-repo). 
+Please fork our [energy efficiency project repository](https://github.com/UBC-MDS/energy_efficiency_analysis) on GitHub and clone the for to your local machine. For more details on how to for a repository, see this GitHub [Documentation](https://help.github.com/en/articles/fork-a-repo). 
 
 Keep your local repository updated by pulling from our repository.
 
@@ -42,7 +42,7 @@ $ git add <modified-file>
 $ git commit -m "Some descriptive message about your change"
 $ git push origin <branch-name>
 ```
-Please create a pull request (PR) on GitHub asking to merge your brand to our main repository. For more information regarding pull request, please see [here] (https://help.github.com/en/articles/creating-a-pull-request). 
+Please create a pull request (PR) on GitHub asking to merge your brand to our main repository. For more information regarding pull request, please see [here](https://help.github.com/en/articles/creating-a-pull-request). 
 
 ### Add more analysis
 
