@@ -2,18 +2,17 @@
 # date: 2022-11-26
 # This code is to read the train data set and performs explanatory data analysis and finally save to provided destination folder
 # example :
-# python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png
+# python src/eda_script_plots_update.py data/processed/train_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png
 """Reads train data set from the processed script and performs explanatory data analysis, 
 It reads in the data, do exploratory data analysis and save the results as four png files.
 It is supposed to work across systems.
-Usage: src/data_processing.py <input_file> <output_file1> <output_file2> <output_file3> <output_file4>
+Usage: src/data_processing.py <input_file> <output_file1> <output_file2> <output_file3>
 
 Options:
 <input_file>     Path (including filename) to data file
 <output_file1>    Path (including filename) of where to locally write the file of the first correlation table as image file
 <output_file2>    Path (including filename) of where to locally write the file of the second distribution plot as image file
 <output_file3>    Path (including filename) of where to locally write the file of the third scatter plot with 'Heating Load' as y-axis as image file
-<output_file4>    Path (including filename) of where to locally write the file of the fourth scatter plot with 'Cooling Load' as y-axis as image file
 
 """
 
@@ -31,7 +30,7 @@ alt.renderers.enable('mimetype')
 
 opt = docopt(__doc__)
 
-def main(input_file, output_file1, output_file2, output_file3, output_file4):
+def main(input_file, output_file1, output_file2, output_file3):
     # read in data
     train_df = pd.read_csv(input_file)
 
@@ -59,28 +58,12 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
     # pairwsie scatter plots
 
     scatter1 = alt.Chart(train_df,
-                    title = 'Feature correlates with heating load').mark_point(opacity = 0.2,
+                    title = 'Scatter plot of feature correlates with heating load').mark_point(opacity = 0.2,
                                        size = 5).encode(
     alt.X (alt.repeat(),
            type = 'quantitative',
            scale = alt.Scale(zero = False)),
     alt.Y('Heating Load',
-          scale = alt.Scale(zero = False))
-    ).properties(
-    width = 300,
-    height = 300
-    ).repeat(
-    repeat = feats,
-        columns = 2
-    )
-
-    scatter2 = alt.Chart(train_df,
-                    title = 'Feature correlates with cooling load').mark_point(opacity = 0.2,
-                                       size = 5).encode(
-    alt.X (alt.repeat(),
-           type = 'quantitative',
-           scale = alt.Scale(zero = False)),
-    alt.Y('Cooling Load',
           scale = alt.Scale(zero = False))
     ).properties(
     width = 300,
@@ -118,8 +101,7 @@ def main(input_file, output_file1, output_file2, output_file3, output_file4):
     dfi.export(corr, output_file1)
     save_chart(distri, output_file2, 2)
     save_chart(scatter1, output_file3, 2)
-    save_chart(scatter2, output_file4, 2)
 
 if __name__ == "__main__":
-    main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"], opt["<output_file3>"], opt["<output_file4>"])
+    main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"], opt["<output_file3>"])
 
