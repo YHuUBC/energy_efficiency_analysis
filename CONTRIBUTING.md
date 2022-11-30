@@ -2,11 +2,17 @@
 # Contributing to the Energy Efficiency project
 
 We appreciate your time and effort in contributing to this project. Any type of contributions are welcomed. These contributions include but not limited to:
+
 **Add more analysis**
+
 **Fix wrong analysis and typos**
+
 **Report bugs**
+
 **Provide feedback**
+
 **Other meaningful input**
+
 
 ## How to contribute code to this project
 
@@ -14,7 +20,7 @@ Please read the following outlines if you want to propose a change.
 
 ### Setting up your environment
 
-Install the environment used for our project on your local machine. Find the environment [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml)
+Install the environment used for our project on your local machine. Find the environment [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml).
 
 Please fork our [energy efficiency project repository] (https://github.com/UBC-MDS/energy_efficiency_analysis) on GitHub and clone the for to your local machine. For more details on how to for a repository, see this GitHub [Documentation](https://help.github.com/en/articles/fork-a-repo). 
 
@@ -30,7 +36,7 @@ $ git switch -c <branch-name>
 
 ### Creating a pull request
 
-When you are ready to submit the changes to our repository, please first commit them to your branch. You can use the following code
+When you are ready to submit the changes to our repository, please first commit them to your branch. You can use the following code:
 ```
 $ git add <modified-file>
 $ git commit -m "Some descriptive message about your change"
@@ -51,7 +57,7 @@ If you find out that any analysis, writing, or examples is wrong and there is an
 We also welcome any other type of meaningful feedback or input, please open an issue and discuss your thoughts with us.
 ## Code of conduct
 
-Please follow the 'Code of conduct' of this project when you make any contributions to this project. The link to our 'Code of conduct' is: https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/CODE_OF_CONDUCT.md
+Please follow the 'Code of conduct' of this project when you make any contributions to this project. The link to our 'Code of conduct' is: https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/CODE_OF_CONDUCT.md.
 
 ## Feedback
 
