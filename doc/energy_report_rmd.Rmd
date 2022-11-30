@@ -1,5 +1,6 @@
 ---
 title: "Analysis of the Energy Efficiency Project"
+author: Mehwish Nabi, Yaou Hu, Nate Puangpanbut at the MDS program of University of British Columbia
 bibliography: references_energy_project.bib
 output: 
   github_document:
@@ -12,8 +13,11 @@ library(knitr)
 library(tidyverse)
 
 ```
+## Authors of this project
 
-## Summary of the data set
+Mehwish Nabi, Yaou Hu, Nate Puangpanbut at the MDS program of University of British Columbia
+
+## Background information and summary of data set
 
 The data set used in this project is retrieved from Tsanas and Xifara (2012). It was contributed by Angeliki Xifara (Civil/Structural Engineer) and was processed by Athanasios Tsanas (Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK). It contains 768 instances and was donated at 2012-11-30. It has no missing values. It has a total of 10 variables, with 8 of them are attributes(features) and two responses. The authors suggested that the aim of this data set is to use the eight features to predict the two responses. These variables are shown in the table below:
 
@@ -39,7 +43,15 @@ kable( table1)
 
 ## Research question
 
-**Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building? And to check contribution level of each feature to the 'Heating Load' of the building.**
+**Given building-related features such as Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution', how accurately can we predict the 'Heating Load' of the building?** 
+
+**What is the contribution level of each feature associated to the 'Heating Load' of the building?**
+
+## Importance of the research question
+
+There are growing concerns about energy waste and its detrimental environmental impact. This project focuses on the energy performance of residential buildings. Concentrating on eight building-related features (i.e., Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', and 'Glazing Area Distribution'), this project aims to predict the 'Heating Load' of the building and examine the contribution level of each feature associated to the 'Heating Load' of the building.
+
+The answers to the above questions are important and meaningful to residents, residential builders, and society. With the findings of our project, home-owners and potential home buyers are provided with more information regarding the energy efficiency of their residential options to make wiser home choices; residential builders could build more energy-efficient and environmentally friendly residential building, which indirectly contribute to the whole society in terms of energy preservation and environment protection.
 
 ## Download data
 
