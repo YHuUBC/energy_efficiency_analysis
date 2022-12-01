@@ -99,6 +99,16 @@ The final report can be found
 
 ## Usage
 
+To replicate the analysis, clone this GitHub repository, install the dependencies listed below, and run the following command at the command line/terminal from the root directory of this project:
+```
+make all
+```
+
+To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
+```
+make clean
+```
+
 To run this analysis,
 
 1.  Clone this project repository to your local.
