@@ -1,23 +1,25 @@
 # author: Nate Puangpanbut, Mehwish Nabi
 # date: 2022-11-26
+# update: Yaou Hu, 2022-12-2
 # This code is to read the train data set and performs model fitting with various types of models,
 # select the best model and performs prediction,
 # finally, saving figures of cv-score comparision and best prediction on privided destination folder,
 # also, save all modles as pickle file to result/model folder
 # example :
-# python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png
+# python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.png results/energy_analysis/prediction.png
 """Trains the various models.
-Usage: src/model_predict.py --train_file=<filepath> --test_file=<filepath> --out_file1=<out_file1> --out_file2=<out_file2>
+Usage: src/model_predict.py <input1> <input2> <out1> <out2>
+
+python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.png results/energy_analysis/prediction.png
+
 Options:
---train_file=<filepath>  the file and path of train dataset(must be in standard csv format)
---test_file=<filepath>   the file and path of test dataset(must be in standard csv format)
---out_file1=<out_file1>  the filename and path of score to be saved(must be in png format)
---out_file2=<out_file2>  the filename and path of prediction to be saved(must be in png format)
+<input1>  the file and path of train dataset(must be in standard csv format)
+<input2>   the file and path of test dataset(must be in standard csv format)
+<out1>   the filename and path of score to be saved(must be in png format)
+<out2>   the filename and path of prediction to be saved(must be in png format)
 """
 
 from docopt import docopt
-import requests
-import os
 import pandas as pd
 import numpy as np
 
@@ -41,13 +43,13 @@ alt.renderers.enable('mimetype')
 
 opt = docopt(__doc__)
 
-def main(train, test, out1, out2):
-    opt = docopt(__doc__)
-    print(opt)
+def main(input1, input2, out1, out2):
+#    opt = docopt(__doc__)
+#    print(opt)
     
     # read data
-    train_df = pd.read_csv(train)
-    test_df =  pd.read_csv(test)
+    train_df = pd.read_csv(input1)
+    test_df =  pd.read_csv(input2)
     
     # separate X, y
     X_test , y_test = test_df.drop(columns=["Heating Load", "Cooling Load"]), test_df["Heating Load"]
@@ -152,13 +154,4 @@ def main(train, test, out1, out2):
 
 
 if __name__ == "__main__":
-     main( opt["--train_file"],opt["--test_file"] , opt["--out_file1"], opt["--out_file2"])
-
-    
-
-    
-
-    
-
-    
-
+    main(opt["<input1>"], opt["<input2>"], opt["<out1>"], opt["<out2>"])

@@ -145,15 +145,14 @@ The exploratory data analysis was conducted through the following steps:
 1.  Load the necessary packages and split the data into train and test
     sets. NaN data were dropped;
 
-2.  do EDA on the train set. First, to check the data types and see if
-    there were missing values, we found out that there were no missing
-    values. Then we see the data distribution through bar plots,
-    value_counts, correlations, and pairwise scatter plots. Through the
-    EDA, we could identify that all the variables are numeric.
+2.  EDA was performed on the train set. We checked the data types and
+    found no missing values. Then we checked the data distribution
+    through bar plots, value_counts, correlations, and pairwise scatter
+    plots. Through the EDA, we could identify that all the variables are
+    numeric. We kept all the features for subsequent analysis.
 
-3.  From the above analysis, we proceeded to do a supervised machine
-    learning model with data preprocessed by Standard Scaling on the
-    numeric features with Heating Load as the target.
+3.  Based on the above analysis, we aim to do a supervised machine
+    learning model with ‘Heating Load’ as the target.
 
 **NOTE: Data preprocessing can be conducted using ‘data_preprocess.py’
 in the energy_efficiency_analysis/src folder**

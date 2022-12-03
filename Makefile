@@ -5,8 +5,8 @@
 all: data/raw/ENB2012_data.csv data/processed/train_df.csv data/processed/test_df.csv results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/energy_analysis/training_score.png results/energy_analysis/prediction.png doc/energy_report_rmd.Rmd
 
 # download data
-data/raw/ENB2012_data.csv: src/download_data.py
-	python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx  --out_file=data/raw/ENB2012_data.csv
+data/raw/ENB2012_data.csv: src/download.py
+	python src/download.py http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx data/raw/ENB2012_data.csv
 
 # data pre-processing
 data/processed/train_df.csv data/processed/test_df.csv: src/data_preprocess.py
@@ -18,7 +18,7 @@ results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda
 
 # model predict
 results/energy_analysis/training_score.png results/energy_analysis/prediction.png: src/model_predict.py
-	python src/model_predict.py --train_file=data/processed/train_df.csv --test_file=data/processed/test_df.csv --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png
+	python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.png results/energy_analysis/prediction.png
 
 # write the report
 doc/energy_report_rmd.Rmd: results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/energy_analysis/training_score.png results/energy_analysis/prediction.png
@@ -26,7 +26,7 @@ doc/energy_report_rmd.Rmd: results/eda/eda_corr_table.png results/eda/eda_distri
 
 
 clean: 
-	rm -rf data/raw
+	rm -rf data/raw/*.csv
 	rm -rf data/processed/*.csv
 	rm -rf results/eda/*.png
 	rm -rf results/energy_analysis/*.png
