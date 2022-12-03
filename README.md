@@ -110,6 +110,11 @@ conda env create --file energy_project.yaml
 ```
 The new environment energy_project will be created in your conda environment, and we will use this as the main environment to run the analysis.
 
+Activate the new environment by:
+```
+conda activate energy_project
+```
+
 To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
 ```
 make clean
