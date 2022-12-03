@@ -91,28 +91,39 @@ The results of the EDA can be found
 [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
 
 
-
 ## Report
 
 The final report can be found
 [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_report_rmd.Rmd). An alternative ipynb file can be found [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_efficiency_report.ipynb).
 
+
 ## Usage
 
-To replicate the analysis, clone this GitHub repository, install the dependencies listed below, and run the following command at the command line/terminal from the root directory of this project:
+To replicate the analysis, clone this GitHub repository to your local,
 ```
-make all
+git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
 ```
+Navigate to your local repository and prompt the command line and run,
+```
+conda env create --file energy_project.yaml
+```
+The new environment energy_project will be created in your conda environment, and we will use this as the main environment to run the analysis.
 
 To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
 ```
 make clean
 ```
 
+To replicate all of the analysis, run the following command at the command line/terminal from the root directory of this project:
+```
+make all
+```
+
+
 ## Dependencies
 
 The Python and Python packages can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml).
+[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_project.yaml).
 
 ## License
 
