@@ -99,11 +99,12 @@ The final report can be found
 
 ## Usage
 
-To replicate the analysis, clone this GitHub repository to your local,
+To replicate the analysis, clone this GitHub repository to your local:
 ```
 git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
 ```
-Navigate to your local repository and prompt the command line and run,
+
+Navigate to your local repository and prompt the command line and run:
 ```
 conda env create --file energy_project.yaml
 ```
