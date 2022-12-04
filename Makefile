@@ -24,7 +24,6 @@ results/energy_analysis/training_score.png results/energy_analysis/prediction.pn
 doc/energy_report_rmd.Rmd: results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png results/eda/eda_scatter1_plot.png results/energy_analysis/training_score.png results/energy_analysis/prediction.png
 	Rscript -e "rmarkdown::render('doc/energy_report_rmd.Rmd', output_format = 'github_document')"
 
-
 clean: 
 	rm -rf data/raw/*.csv
 	rm -rf data/processed/*.csv
