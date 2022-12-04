@@ -20,7 +20,11 @@ Please read the following outlines if you want to propose a change.
 
 ### Setting up your environment
 
-Install the environment used for our project on your local machine. Find the environment [here](energy_project.yaml).
+Install the environment used for our project on your local machine use the following code and the yaml file. Find the environment [here](energy_project.yaml).
+
+```
+$ conda env create -f energy_project.yaml
+```
 
 Please fork our [energy efficiency project repository](https://github.com/UBC-MDS/energy_efficiency_analysis) on GitHub and clone the for to your local machine. For more details on how to for a repository, see this GitHub [Documentation](https://help.github.com/en/articles/fork-a-repo). 
 
