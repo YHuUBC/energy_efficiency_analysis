@@ -55,11 +55,11 @@ The answers to the above questions are important and meaningful to residents, re
 
 ## Download data
 
-**NOTE: Data download can be conducted using 'download_data.py' in the energy_efficiency_analysis/src folder with the explanation below:**
+**NOTE: Data download can be conducted using 'download.py' in the energy_efficiency_analysis/src folder with the explanation below:**
 
 'This code is to download original raw file data from UCI ML databses and convert it to csv file and finally save to provided destination folder
 example :
-python src/download_data.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx  --out_file=data/raw/ENB2012_data.csv'
+python src/download.py --url=http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx  --out_file=data/raw/ENB2012_data.csv'
 
 ## Data pre-processing: partition the data set into training and test sub-data sets
 
@@ -144,7 +144,7 @@ The steps involved are as :
  - the models are saved using pickle.
  
  - Predictions are made on test data using the model that has highest cross validation score 
- 
+
 
 The models used for the training and predictions of the data are :
 
@@ -188,7 +188,8 @@ select the best model and performs prediction,
 finally, saving figures of cv-score comparison and best prediction on provided destination folder,
 also, save all models as pickle file to result/model folder
 example :
-python src/model_predict.py --train_file='data/processed/train_df.csv' --test_file='data/processed/test_df.csv' --out_file1=results/energy_analysis/training_score.png --out_file2=results/energy_analysis/prediction.png'
+
+python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.png results/energy_analysis/prediction.png
 
 
 ## Limitations
