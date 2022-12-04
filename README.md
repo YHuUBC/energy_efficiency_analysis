@@ -88,13 +88,13 @@ The exploratory data analysis was conducted through the following steps:
 
 
 The results of the EDA can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/results/eda/energy_efficiency_eda.ipynb).
+[here](results/eda/energy_efficiency_eda.ipynb).
 
 
 ## Report
 
 The final report can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_report_rmd.Rmd). An alternative ipynb file can be found [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/doc/energy_efficiency_report.ipynb).
+[here](doc/energy_report_rmd.Rmd). An alternative ipynb file can be found [here](doc/energy_efficiency_report.ipynb).
 
 
 ## Usage
@@ -129,7 +129,7 @@ make all
 ## Dependencies
 
 The Python and Python packages can be found
-[here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_project.yaml).
+[here](energy_project.yaml).
 
 ## License
 
