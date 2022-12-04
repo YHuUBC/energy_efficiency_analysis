@@ -20,7 +20,7 @@ Please read the following outlines if you want to propose a change.
 
 ### Setting up your environment
 
-Install the environment used for our project on your local machine. Find the environment [here](https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/energy_env.yaml).
+Install the environment used for our project on your local machine. Find the environment [here](main/energy_project.yaml).
 
 Please fork our [energy efficiency project repository](https://github.com/UBC-MDS/energy_efficiency_analysis) on GitHub and clone the for to your local machine. For more details on how to for a repository, see this GitHub [Documentation](https://help.github.com/en/articles/fork-a-repo). 
 
@@ -57,7 +57,7 @@ If you find out that any analysis, writing, or examples is wrong and there is an
 We also welcome any other type of meaningful feedback or input, please open an issue and discuss your thoughts with us.
 ## Code of conduct
 
-Please follow the 'Code of conduct' of this project when you make any contributions to this project. The link to our 'Code of conduct' is: https://github.com/UBC-MDS/energy_efficiency_analysis/blob/main/CODE_OF_CONDUCT.md.
+Please follow the 'Code of conduct' of this project when you make any contributions to this project. The link to our 'Code of conduct' is [here](main/CODE_OF_CONDUCT.md).
 
 ## Feedback
 
