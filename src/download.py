@@ -1,3 +1,4 @@
+#author : Mehwish Nabi
 # date: 2022-12-2
 # This code is to download original excel data and transform to csv at the destination folder
 # example :
@@ -18,14 +19,30 @@ Options:
 import pandas as pd
 import numpy as np
 from docopt import docopt
+import requests
 
 opt = docopt(__doc__)
 
-def main(input_file, output_file1):
-    # read in data
-    data = pd.read_excel(input_file).dropna()
-    # save data into csv
-    data.to_csv(output_file1, index = False)
+def main(url, output_file1):
+  """ Downloads the file in csv format from the provided link
+  at the given path 
+  parameters :
+        url : the link for the data 
+        out_file : the path and name of the file for the file to be saved
+  """
+  try: 
+    request = requests.get(url)
+    request.status_code == 200
+  except Exception as req:
+    print("Website at the provided url does not exist.")
+    print(req)
     
+  data = pd.read_excel(url, header=0)
+  try:
+      data.to_csv(output_file1, index = False)
+  except:
+      os.makedirs(os.path.dirname(output_file1))
+      data.to_csv(output_file1, index = False)
+
 if __name__ == "__main__":
     main(opt["<input_file>"], opt["<output_file1>"])
