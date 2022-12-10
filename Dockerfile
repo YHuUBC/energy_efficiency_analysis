@@ -19,6 +19,7 @@ RUN pip install dataframe-image
 RUN pip install openpyxl==3.0.10
 RUN pip install ipython
 RUN pip install altair-saver
+RUN pip install eli5
 RUN python -m pip install vl-convert-python
 
 RUN apt-get update && apt-get install make
