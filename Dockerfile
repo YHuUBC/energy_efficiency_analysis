@@ -23,7 +23,10 @@ RUN pip install pandas
 RUN pip install numpy
 RUN conda install pandoc
 RUN pip install docopt
-
+RUN pip install openpyxl
+RUN pip install dataframe-image
+RUN pip install vl-convert-python==0.4.0
+RUN pip install joblib==1.1.0
 
 
 
