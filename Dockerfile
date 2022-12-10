@@ -53,7 +53,7 @@ RUN apt-get install r-base r-base-dev -y
 # install non R tidyverse dependencies??
 RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 
-# r packages 
+# R packages 
 RUN R -q -e 'install.packages("tidyverse")'
 RUN R -q -e 'install.packages("rmarkdown")'
 
