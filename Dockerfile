@@ -19,12 +19,12 @@ RUN pip install shap
 RUN pip install altair
 RUN pip install altair-saver
 
-RUN pip install pandas
-RUN pip install numpy
+RUN pip install pandas==1.4.4
+RUN pip install numpy==1.23.5
 RUN conda install pandoc
 RUN pip install docopt
 RUN pip install openpyxl
-RUN pip install dataframe-image
+RUN pip install dataframe-image==0.1.3
 RUN pip install vl-convert-python==0.4.0
 RUN pip install joblib==1.1.0
 
