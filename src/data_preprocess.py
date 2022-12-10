@@ -1,5 +1,6 @@
 # author: Yaou Hu
 # date: 2022-11-26
+# update: 2022-12-10
 # This code is to csv data and performs data cleaning, pre-processingm, then
 # separating into train and test data sets, and finally save to the provided destination folder.
 # example :
@@ -44,9 +45,15 @@ def main(input_file, output_file1, output_file2):
     # split data into train and test sub-sets with 30% as test data
     train_df, test_df = train_test_split(data, test_size = 0.3, random_state = 4)
     # save train subset into a new set
-    train_df.to_csv(output_file1, index = False)
-    test_df.to_csv(output_file2, index = False)
-    
+    try:
+        train_df.to_csv(output_file1, index = False)
+        test_df.to_csv(output_file2, index = False)
+    except:
+        os.makedirs(os.path.dirname(output_file1))
+        train_df.to_csv(output_file1, index = False)
+        os.makedirs(os.path.dirname(output_file2))
+        test_df.to_csv(output_file2, index = False)
+        
 if __name__ == "__main__":
     main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"])
 
