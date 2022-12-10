@@ -28,6 +28,6 @@ RUN pip install dataframe-image
 RUN pip install vl-convert-python==0.4.0
 RUN pip install joblib==1.1.0
 
-RUN apt-get update
+RUN apt-get update && apt-get install make
 
 
