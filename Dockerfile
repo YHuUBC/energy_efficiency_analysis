@@ -15,20 +15,20 @@ RUN conda update -n base -c conda-forge -y conda
 RUN apt-get update
 RUN apt-get -y --no-install-recommends install
 
-RUN conda install python-graphviz -y \
-    && conda install requests[version='>=2.24.0'] -y \
-    && conda install scikit-learn[version='>=1.1.3'] -y \
-    && conda install selenium[version='<4.3.0'] -y \
-    && conda install pip -y \
-    && conda install jinja2 -y \
-    && conda install ipykernel -y \
-    && conda install jsonschema=4.16 -y \
-    && conda install -c conda-forge altair_saver -y \
-    && conda install pandas[version='<1.5'] -y \
-    && conda install matplotlib[version='>=3.2.2'] -y \
-    && conda install -c conda-forge eli5 -y \
-    && conda install -c conda-forge shap -y \
-    && conda install -c conda-forge xgboost -y
+RUN conda install python-graphviz -y
+RUN conda install requests[version='>=2.24.0'] -y
+RUN conda install scikit-learn[version='>=1.1.3'] -y
+RUN conda install selenium[version='<4.3.0'] -y
+RUN conda install pip -y
+RUN conda install jinja2 -y
+RUN conda install ipykernel -y
+RUN conda install jsonschema=4.16 -y
+RUN conda install -c conda-forge altair_saver -y
+RUN conda install pandas[version='<1.5'] -y
+RUN conda install matplotlib[version='>=3.2.2'] -y
+RUN conda install -c conda-forge eli5 -y
+RUN conda install -c conda-forge shap -y
+RUN conda install -c conda-forge xgboost -y
     
 RUN pip install openpyxl
 RUN pip install dataframe-image==0.1.3
