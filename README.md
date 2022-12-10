@@ -99,6 +99,33 @@ The final report can be found
 
 ## Usage
 
+There are two suggested ways to run this analysis:
+
+1. Using Docker
+note - the instructions in this section also depends on running this in a unix shell (e.g., terminal or Git Bash)
+
+To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
+```
+docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.43.0 make -C '/home' clean
+```
+
+To replicate the analysis, install Docker. Then clone this GitHub repository and run the following command at the command line/terminal from the root directory of this project:
+```
+docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.43.0 make -C '/home' all
+```
+
+Please be noted that,
+- You may remove `--rm --platform linux/amd64`, if you are not using Mac M1 architecture.
+- You may put some specific path to your mount and rin the docker image and container such as
+```
+$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.43.0 make -C C/Users/yaouh/energy_efficiency_analysis clean
+```
+```
+$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.43.0 make -C C/Users/yaouh/energy_efficiency_analysis all
+```
+
+2. Without using Docker
+
 To replicate the analysis, clone this GitHub repository to your local:
 ```
 git clone https://github.com/UBC-MDS/energy_efficiency_analysis.git
