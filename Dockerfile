@@ -19,12 +19,16 @@ RUN conda install pandoc
 
 RUN pip install xgboost==1.7.1
 RUN pip install docopt
-RUN pip install vl-convert-python==0.5.0
-RUN pip install dataframe-image==0.1.3
+
+RUN pip install dataframe-image
 RUN pip install openpyxl==3.0.10
 RUN pip install ipython
-# RUN pip install altair-saver==0.1.0
-RUN pip install altair_saver
+
+RUN pip install altair-saver
+# RUN pip install altair_saver
+
+# RUN pip install vl-convert-python==0.5.0
+RUN python -m pip install vl-convert-python
 
 RUN apt-get update && apt-get install make
 
