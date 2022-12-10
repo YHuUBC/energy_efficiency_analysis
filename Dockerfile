@@ -5,8 +5,6 @@
 
 FROM continuumio/miniconda3
 
-RUN apt-get install -y build-essential
-
 RUN conda install python=3.10.8
 RUN pip install -U scikit-learn
 RUN conda install requests
@@ -30,6 +28,6 @@ RUN pip install dataframe-image
 RUN pip install vl-convert-python==0.4.0
 RUN pip install joblib==1.1.0
 
-
+RUN apt-get install -y build-essential
 
 
