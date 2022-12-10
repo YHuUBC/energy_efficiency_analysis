@@ -101,7 +101,7 @@ The final report can be found
 
 There are two suggested ways to run this analysis:
 
-1. Using Docker
+**1. Using Docker**
 
 note - the instructions in this section also depends on running this in a unix shell (e.g., terminal or Git Bash)
 
@@ -126,7 +126,7 @@ $ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/
 ```
 
 
-2. Without using Docker
+**2. Without using Docker**
 
 To replicate the analysis, clone this GitHub repository to your local:
 ```
