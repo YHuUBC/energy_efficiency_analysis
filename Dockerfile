@@ -5,6 +5,8 @@
 
 FROM continuumio/miniconda3
 
+RUN apt-get install -y build-essential
+
 RUN conda install python=3.10.8
 RUN pip install -U scikit-learn
 RUN conda install requests
