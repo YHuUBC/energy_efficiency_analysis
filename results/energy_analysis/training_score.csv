@@ -1,0 +1,6 @@
+,KNN,KNN,Ridge,Ridge,DecisionTree,DecisionTree,SVR,SVR,RandomForest,RandomForest,XGB,XGB
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+fit_time,0.006,0.002,0.01,0.011,0.008,0.002,0.029,0.004,0.331,0.005,0.21,0.044
+score_time,0.004,0.001,0.003,0.001,0.002,0.001,0.014,0.002,0.02,0.002,0.012,0.005
+test_score,0.931,0.014,0.91,0.014,0.995,0.002,0.914,0.016,0.997,0.001,0.998,0.0
+train_score,0.958,0.003,0.912,0.003,1.0,0.0,0.923,0.004,1.0,0.0,1.0,0.0
