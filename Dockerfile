@@ -35,6 +35,8 @@ RUN pip install openpyxl
 RUN pip install dataframe-image==0.1.3
 RUN pip install altair
 
+RUN apt-get install make
+
 # dependencies:
 #   - graphviz
 #   - selenium<4.3.0
