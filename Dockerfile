@@ -23,8 +23,7 @@ RUN pip install dataframe-image==0.1.3
 RUN pip install openpyxl==3.0.10
 RUN pip install ipython
 
-# RUN apt-get update && apt-get install make
-RUN apt-get install make
+RUN apt-get update && apt-get install make
 
 
 
