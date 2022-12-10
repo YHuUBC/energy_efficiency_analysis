@@ -32,6 +32,7 @@ RUN pip install joblib==1.1.0
 RUN conda search graphviz --channel conda-forge
 
 # RUN apt install chromium-chromedriver
+RUN pip install chromedriver-binary
 
 RUN python2 -m pip install ipykernel==6.17.1
 RUN pip install ipython==8.7.0
