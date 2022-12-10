@@ -1,9 +1,9 @@
 # Docker image for Energy efficiency analysis project
 # Date: Dec 10, 2022
 
-FROM jupyter/scipy-notebook
+FROM continuumio/miniconda3
 
-USER root
+# USER root
 
 RUN pip install docopt-ng \
     && pip install vl-convert-python==0.5.0
@@ -34,6 +34,8 @@ RUN conda install python-graphviz -y \
 RUN pip install openpyxl
 RUN pip install dataframe-image==0.1.3
 RUN pip install altair
+
+RUN conda search graphviz --channel conda-forge
 
 RUN apt-get install make
 
