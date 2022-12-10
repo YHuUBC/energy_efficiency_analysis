@@ -3,41 +3,73 @@
 
 FROM continuumio/miniconda3
 
-# USER root
+RUN conda create -n evergy_project python=3.10.8 -y
+RUN conda activate evergy_project
 
-RUN pip install docopt-ng \
-    && pip install vl-convert-python==0.5.0
-RUN conda install -c conda-forge -y pandoc
-RUN pip install joblib --quiet
-
-RUN conda update -n base -c conda-forge -y conda
-
-RUN apt-get update
-RUN apt-get -y --no-install-recommends install
-
+RUN conda install pandas=1.4.4 -y
+RUN conda install scikit-learn=1.1.3 -y
+RUN conda install matplotlib=3.6.2 -y
+RUN conda install altair=4.2.0 -y
+RUN conda install altair_saver=0.1.0 -y
+RUN conda install requests=2.28.1 -y
 RUN conda install python-graphviz -y
-RUN conda install requests[version='>=2.24.0'] -y
-RUN conda install scikit-learn[version='>=1.1.3'] -y
-RUN conda install selenium[version='<4.3.0'] -y
-RUN conda install pip -y
-RUN conda install jinja2 -y
-RUN conda install ipykernel -y
-RUN conda install jsonschema=4.16 -y
-RUN conda install -c conda-forge altair_saver -y
-RUN conda install pandas[version='<1.5'] -y
-RUN conda install matplotlib[version='>=3.2.2'] -y
-RUN conda install -c conda-forge eli5 -y
-RUN conda install -c conda-forge shap -y
-RUN conda install -c conda-forge xgboost -y
-    
-RUN pip install openpyxl
+RUN conda install pandoc -y
+
+RUN pip install xgboost==1.7.1
+RUN pip install docopt
+RUN pip install vl-convert-python==0.5.0
 RUN pip install dataframe-image==0.1.3
-RUN pip install altair
+RUN pip install openpyxl==3.0.10
+RUN pip install ipython
 
-RUN conda search graphviz --channel conda-forge
-RUN conda install pandoc
+RUN apt-get update && apt-get install make
 
-RUN apt-get install make
+
+
+
+
+
+
+
+
+# ---------------------------
+# FROM continuumio/miniconda3
+
+# # USER root
+
+# RUN pip install docopt-ng \
+#     && pip install vl-convert-python==0.5.0
+# RUN conda install -c conda-forge -y pandoc
+# RUN pip install joblib --quiet
+
+# RUN conda update -n base -c conda-forge -y conda
+
+# RUN apt-get update
+# RUN apt-get -y --no-install-recommends install
+
+# RUN conda install python-graphviz -y
+# RUN conda install requests[version='>=2.24.0'] -y
+# RUN conda install scikit-learn[version='>=1.1.3'] -y
+# RUN conda install selenium[version='<4.3.0'] -y
+# RUN conda install pip -y
+# RUN conda install jinja2 -y
+# RUN conda install ipykernel -y
+# RUN conda install jsonschema=4.16 -y
+# RUN conda install -c conda-forge altair_saver -y
+# RUN conda install pandas[version='<1.5'] -y
+# RUN conda install matplotlib[version='>=3.2.2'] -y
+# RUN conda install -c conda-forge eli5 -y
+# RUN conda install -c conda-forge shap -y
+# RUN conda install -c conda-forge xgboost -y
+    
+# RUN pip install openpyxl
+# RUN pip install dataframe-image==0.1.3
+# RUN pip install altair
+
+# RUN conda search graphviz --channel conda-forge
+# RUN conda install pandoc
+
+# RUN apt-get install make
 
 # dependencies:
 #   - graphviz
@@ -49,10 +81,6 @@ RUN apt-get install make
 #     - mglearn
 #     - psutil>=5.7.2
 #     - ipython
-
-
-
-
 
 
 # ---------------------------
