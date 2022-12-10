@@ -11,7 +11,7 @@ RUN conda install pandas=1.4.4 -y
 RUN conda install scikit-learn=1.1.3 -y
 RUN conda install matplotlib=3.6.2 -y
 RUN conda install altair
-RUN conda install -c conda-forge altair_saver
+# RUN conda install -c conda-forge altair_saver
 RUN conda install requests=2.28.1
 RUN conda install python-graphviz
 RUN conda install pandoc
@@ -22,6 +22,7 @@ RUN pip install vl-convert-python==0.5.0
 RUN pip install dataframe-image==0.1.3
 RUN pip install openpyxl==3.0.10
 RUN pip install ipython
+RUN pip install altair-saver==0.1.0
 
 RUN apt-get update && apt-get install make
 
