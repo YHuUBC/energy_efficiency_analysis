@@ -31,6 +31,8 @@ RUN pip install joblib==1.1.0
 RUN conda install -c anaconda graphviz=0.20.1
 RUN conda search graphviz --channel conda-forge
 
+RUN apt install chromium-chromedriver
+
 RUN apt-get update && apt-get install make
 
 
