@@ -3,8 +3,6 @@
 
 FROM continuumio/miniconda3
 
-USER root
-
 RUN conda install python=3.10.8 -y
 # RUN conda create -n evergy_project python=3.10.8 -y
 # RUN conda activate evergy_project
