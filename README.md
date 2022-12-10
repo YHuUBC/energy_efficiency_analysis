@@ -107,22 +107,22 @@ note - the instructions in this section also depends on running this in a unix s
 
 To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
 ```
-docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.43.0 make -C '/home' clean
+docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.46.0 make -C '/home' clean
 ```
 
 To replicate the analysis, install Docker. Then clone this GitHub repository and run the following command at the command line/terminal from the root directory of this project:
 ```
-docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.43.0 make -C '/home' all
+docker run --rm --platform linux/amd64 -v $PWD:/home suraporn/energy_efficiency_analysis:v0.46.0 make -C '/home' all
 ```
 
 Please be noted that,
 - You may remove `--rm --platform linux/amd64`, if you are not using Mac M1 architecture.
 - You may put some specific path to your mount and rin the docker image and container such as
 ```
-$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.43.0 make -C C/Users/yaouh/energy_efficiency_analysis clean
+$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.46.0 make -C C/Users/yaouh/energy_efficiency_analysis clean
 ```
 ```
-$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.43.0 make -C C/Users/yaouh/energy_efficiency_analysis all
+$ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.46.0 make -C C/Users/yaouh/energy_efficiency_analysis all
 ```
 
 
