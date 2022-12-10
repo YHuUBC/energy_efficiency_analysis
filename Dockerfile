@@ -1,9 +1,16 @@
 # Docker image for Energy efficiency analysis project
 # Date: Dec 10, 2022
 
-# FROM jupyter/scipy-notebook:85f615d5cafa
-
 FROM continuumio/miniconda3
+
+RUN conda install ipykernel -y ==6.17.1
+RUN pip install ipython==8.7.0
+RUN conda install python-graphviz
+# RUN conda install -c anaconda graphviz=0.20.1
+# RUN conda search graphviz --channel conda-forge
+# RUN apt install chromium-chromedriver
+RUN pip install chromedriver-binary
+RUN conda install jinja2
 
 RUN conda install python=3.10.8
 RUN pip install -U scikit-learn
@@ -27,15 +34,6 @@ RUN pip install openpyxl
 RUN pip install dataframe-image==0.1.3
 RUN pip install vl-convert-python==0.4.0
 RUN pip install joblib==1.1.0
-
-# RUN conda install -c anaconda graphviz=0.20.1
-RUN conda search graphviz --channel conda-forge
-
-# RUN apt install chromium-chromedriver
-RUN pip install chromedriver-binary
-
-RUN python2 -m pip install ipykernel==6.17.1
-RUN pip install ipython==8.7.0
 
 RUN apt-get update && apt-get install make
 
