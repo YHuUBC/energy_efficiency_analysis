@@ -102,6 +102,7 @@ The final report can be found
 There are two suggested ways to run this analysis:
 
 1. Using Docker
+
 note - the instructions in this section also depends on running this in a unix shell (e.g., terminal or Git Bash)
 
 To reset the repo to a clean state, with no intermediate or results files, run the following command at the command line/terminal from the root directory of this project:
@@ -123,6 +124,7 @@ $ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/
 ```
 $ docker run --rm -v /$(pwd):/C/Users/yaouh/energy_efficiency_analysis suraporn/energy_efficiency_analysis:v0.43.0 make -C C/Users/yaouh/energy_efficiency_analysis all
 ```
+
 
 2. Without using Docker
 
