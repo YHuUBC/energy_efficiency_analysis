@@ -9,8 +9,6 @@ RUN conda install -y python=3.10
 
 # Add conda-forge channel 
 RUN conda config --append channels conda-forge
-# Add default channel
-RUN conda config --append channels defaults
 
 # Conda Installs
 RUN conda install -y\
