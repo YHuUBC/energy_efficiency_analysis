@@ -3,7 +3,7 @@
 
 FROM continuumio/miniconda3
 
-RUN conda install ipykernel==6.17.1
+RUN conda install ipykernel -y
 RUN pip install ipython==8.7.0
 RUN conda install python-graphviz
 # RUN conda install -c anaconda graphviz=0.20.1
