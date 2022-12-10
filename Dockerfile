@@ -43,6 +43,9 @@ RUN pip install xgboost
 RUN pip install ipython
 RUN pip install openpyxl
 RUN pip install portpicker
+RUN pip install nbconvert
+RUN pip install beautifulsoup4
+RUN pip install aiodns
 
 # install R
 RUN apt-get install r-base r-base-dev -y
