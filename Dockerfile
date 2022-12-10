@@ -10,11 +10,11 @@ RUN conda install python=3.10.8 -y
 RUN conda install pandas=1.4.4 -y
 RUN conda install scikit-learn=1.1.3 -y
 RUN conda install matplotlib=3.6.2 -y
-RUN conda install altair=4.2.0 -y
-RUN conda install altair_saver=0.1.0 -y
-RUN conda install requests=2.28.1 -y
-RUN conda install python-graphviz -y
-RUN conda install pandoc -y
+RUN conda install altair=4.2.0
+RUN conda install altair_saver=0.1.0
+RUN conda install requests=2.28.1
+RUN conda install python-graphviz
+RUN conda install pandoc
 
 RUN pip install xgboost==1.7.1
 RUN pip install docopt
@@ -23,8 +23,8 @@ RUN pip install dataframe-image==0.1.3
 RUN pip install openpyxl==3.0.10
 RUN pip install ipython
 
-RUN apt-get update && apt-get install make
-
+# RUN apt-get update && apt-get install make
+RUN apt-get install make
 
 
 
