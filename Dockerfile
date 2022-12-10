@@ -28,6 +28,9 @@ RUN pip install dataframe-image==0.1.3
 RUN pip install vl-convert-python==0.4.0
 RUN pip install joblib==1.1.0
 
+RUN conda install -c anaconda graphviz=0.20.1
+RUN conda search graphviz --channel conda-forge
+
 RUN apt-get update && apt-get install make
 
 
