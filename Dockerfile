@@ -7,7 +7,7 @@ FROM continuumio/miniconda3
 
 RUN conda install python=3.10.8
 RUN pip install -U scikit-learn
-RUN conda requests
+RUN conda install requests
 
 RUN conda install -c conda-forge xgboost
 RUN conda install -c conda-forge lightgbm
@@ -18,6 +18,11 @@ RUN pip install shap
 
 RUN pip install altair
 RUN pip install altair-saver
+
+RUN pip install pandas
+RUN pip install numpy
+RUN conda install pandoc
+RUN pip install docopt
 
 
 
