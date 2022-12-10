@@ -23,7 +23,7 @@ RUN conda install -y jinja2
 RUN conda install -y altair
 RUN conda install -y altair_saver
 RUN conda install -y selenium==4.3.0
-RUN conda install -y pandas<1.5
+RUN conda install -y pandas
 RUN conda install -y imbalanced-learn
 RUN conda install -y numpy
 RUN conda install -y pandoc
