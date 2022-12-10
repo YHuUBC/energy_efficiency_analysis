@@ -3,8 +3,9 @@
 
 FROM continuumio/miniconda3
 
-RUN conda create -n evergy_project python=3.10.8 -y
-RUN conda activate evergy_project
+RUN conda install python=3.10.8 -y
+# RUN conda create -n evergy_project python=3.10.8 -y
+# RUN conda activate evergy_project
 
 RUN conda install pandas=1.4.4 -y
 RUN conda install scikit-learn=1.1.3 -y
