@@ -98,7 +98,7 @@ def main(input_file, output_file1, output_file2, output_file3):
             raise ValueError("Only svg and png formats are supported")
     
     # save charts and table
-    dfi.export(corr, output_file1)
+    # dfi.export(corr, output_file1)
     save_chart(distri, output_file2, 2)
     save_chart(scatter1, output_file3, 2)
 

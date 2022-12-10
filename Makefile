@@ -27,7 +27,8 @@ doc/energy_report_rmd.Rmd: results/eda/eda_corr_table.png results/eda/eda_distri
 clean: 
 	rm -rf data/raw/*.csv
 	rm -rf data/processed/*.csv
-	rm -rf results/eda/*.png
-	rm -rf results/energy_analysis/*.png
+	rm -rf results/eda/eda_distribution_plot.png
+	rm -rf results/eda/eda_scatter1_plot.png
+	rm -rf results/energy_analysis/prediction.png
 	rm -rf doc/energy_report_rmd.md doc/energy_report_rmd.html
 

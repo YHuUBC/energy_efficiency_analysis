@@ -118,7 +118,7 @@ def main(input1, input2, out1, out2):
             raise ValueError("Only svg and png formats are supported")
     
     # export score result
-    dfi.export(result_df, out1)
+    # dfi.export(result_df, out1)
     
     # save predicted plot
     save_chart(point, out2, 2)
