@@ -1,0 +1,38 @@
+digraph G {
+n2[label="all", color="red"];
+n7[label="data/processed/test_df.csv", color="red"];
+n5[label="data/processed/train_df.csv", color="red"];
+n3[label="data/raw/ENB2012_data.csv", color="red"];
+n15[label="doc/energy_report_rmd.Rmd", color="red"];
+n8[label="results/eda/eda_corr_table.png", color="red"];
+n10[label="results/eda/eda_distribution_plot.png", color="red"];
+n11[label="results/eda/eda_scatter1_plot.png", color="red"];
+n14[label="results/energy_analysis/prediction.png", color="red"];
+n12[label="results/energy_analysis/training_score.png", color="red"];
+n6[label="src/data_preprocess.py", color="green"];
+n4[label="src/download.py", color="green"];
+n9[label="src/eda_script_plots_update.py", color="green"];
+n13[label="src/model_predict.py", color="green"];
+n7 -> n2 ; 
+n5 -> n2 ; 
+n3 -> n2 ; 
+n15 -> n2 ; 
+n8 -> n2 ; 
+n10 -> n2 ; 
+n11 -> n2 ; 
+n14 -> n2 ; 
+n12 -> n2 ; 
+n6 -> n7 ; 
+n6 -> n5 ; 
+n4 -> n3 ; 
+n8 -> n15 ; 
+n10 -> n15 ; 
+n11 -> n15 ; 
+n14 -> n15 ; 
+n12 -> n15 ; 
+n9 -> n8 ; 
+n9 -> n10 ; 
+n9 -> n11 ; 
+n13 -> n14 ; 
+n13 -> n12 ; 
+}
