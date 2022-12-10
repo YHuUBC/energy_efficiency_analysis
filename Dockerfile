@@ -28,14 +28,14 @@ RUN conda install python-graphviz -y \
     && conda install matplotlib[version='>=3.2.2'] -y \
     && conda install -c conda-forge eli5 -y \
     && conda install -c conda-forge shap -y \
-    && conda install -c conda-forge xgboost -y \
-    && conda install pandoc
+    && conda install -c conda-forge xgboost -y
     
 RUN pip install openpyxl
 RUN pip install dataframe-image==0.1.3
 RUN pip install altair
 
 RUN conda search graphviz --channel conda-forge
+RUN conda install pandoc
 
 RUN apt-get install make
 
