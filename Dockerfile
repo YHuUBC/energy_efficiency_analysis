@@ -23,7 +23,7 @@ RUN conda install -y\
     jinja2 \
     altair \
     altair_saver \
-    selenium<4.3.0 \
+    selenium==4.3.0 \
     pandas<1.5 \
     imbalanced-learn \
     numpy \
