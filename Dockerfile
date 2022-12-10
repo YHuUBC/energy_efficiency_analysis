@@ -13,7 +13,7 @@ RUN pip install chromedriver-binary
 RUN conda install jinja2
 
 RUN conda install python=3.10.8
-RUN pip install -U scikit-learn
+RUN pip install -U scikit-learn==1.1.3
 RUN conda install requests
 
 RUN conda install -c conda-forge xgboost
