@@ -94,7 +94,7 @@ The results of the EDA can be found
 ## Report
 
 The final report can be found
-[here](doc/energy_report_rmd.md). An alternative ipynb file can be found [here](doc/energy_efficiency_report.ipynb).
+[here](doc/energy_report_rmd.md).
 
 
 ## Usage
