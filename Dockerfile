@@ -6,11 +6,17 @@
 FROM continuumio/miniconda3
 
 RUN conda install python=3.10.8
-RUN conda scikit-learn>=1.1.3
-RUN conda requests>=2.24.0
+RUN conda scikit-learn
+RUN conda requests
 
+RUN conda install -c conda-forge xgboost
+RUN conda install -c conda-forge lightgbm
+RUN conda install -c conda-forge catboost
+
+RUN pip install altair
 RUN pip install altair-saver
-RUN pip install altair-saver
+
+
 
 
 
