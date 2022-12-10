@@ -29,10 +29,14 @@ from sklearn.model_selection import train_test_split
 opt = docopt(__doc__)
 
 def main(input_file, output_file1, output_file2):
-    # read in data
-    data = pd.read_csv(input_file).dropna()
-    # rename data
-    data = data.rename(columns = {'X1':'Relative Compactness',
+    # test the input_file type
+    if input_file.split('.')[-1] != 'csv':
+        raise ValueError("Only csv format is supported")
+    else:    
+        # read in data
+        data = pd.read_csv(input_file).dropna()
+        # rename data
+        data = data.rename(columns = {'X1':'Relative Compactness',
                                             'X2':'Surface Area',
                                             'X3':'Wall Area',
                                             'X4':'Roof Area',
@@ -42,17 +46,17 @@ def main(input_file, output_file1, output_file2):
                                             'X8':'Glazing Area Distribution',
                                             'Y1':'Heating Load',
                                             'Y2':'Cooling Load'})
-    # split data into train and test sub-sets with 30% as test data
-    train_df, test_df = train_test_split(data, test_size = 0.3, random_state = 4)
-    # save train subset into a new set
-    try:
-        train_df.to_csv(output_file1, index = False)
-        test_df.to_csv(output_file2, index = False)
-    except:
-        os.makedirs(os.path.dirname(output_file1))
-        train_df.to_csv(output_file1, index = False)
-        os.makedirs(os.path.dirname(output_file2))
-        test_df.to_csv(output_file2, index = False)
+        # split data into train and test sub-sets with 30% as test data
+        train_df, test_df = train_test_split(data, test_size = 0.3, random_state = 4)
+        # save train subset into a new set
+        try:
+            train_df.to_csv(output_file1, index = False)
+            test_df.to_csv(output_file2, index = False)
+        except:
+            os.makedirs(os.path.dirname(output_file1))
+            train_df.to_csv(output_file1, index = False)
+            os.makedirs(os.path.dirname(output_file2))
+            test_df.to_csv(output_file2, index = False)
         
 if __name__ == "__main__":
     main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"])

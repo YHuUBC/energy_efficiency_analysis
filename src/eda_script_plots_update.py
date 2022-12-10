@@ -53,56 +53,64 @@ def save_chart(chart, filename, scale_factor=1):
             f.write(vlc.vegalite_to_png(chart.to_dict(), scale=scale_factor))
     else:
         raise ValueError("Only svg and png formats are supported")
-
-
+    
 def main(input_file, output_file1, output_file2, output_file3):
-    # read in data
-    train_df = pd.read_csv(input_file)
+    # read in data and test the data format
+    if input_file.split('.')[-1] != 'csv':
+        raise ValueError("Only csv format is supported")
+    else:    
+        train_df = pd.read_csv(input_file)
+        # test the output format
+        if type(train_df) != pd.DataFrame:
+            raise ValueError("Only dataframe is supported")
+            # correlation matrix
+        else:
+            corr = train_df.corr('spearman').style.background_gradient()
 
-    # correlation matrix
-    corr = train_df.corr('spearman').style.background_gradient()
+            # check the distribution of all variables
+            column_list = train_df.columns.tolist()
+            feats = ['Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area',
+                'Overall Height', 'Orientation', 'Glazing Area', 'Glazing Area Distribution']
 
-    # check the distribution of all variables
-    column_list = train_df.columns.tolist()
-    feats = ['Relative Compactness', 'Surface Area', 'Wall Area', 'Roof Area', 'Overall Height', 'Orientation', 'Glazing Area', 'Glazing Area Distribution']
-
-    distri = alt.Chart(train_df, 
+            distri = alt.Chart(train_df, 
                          title = 'Bar chart of variable distribution'
                         ).mark_bar(opacity = 0.5).encode(
-    alt.X (alt.repeat(),
-           type = 'quantitative',
-          bin = alt.Bin(maxbins = 45)),
-    alt.Y('count()', stack = None),
-    tooltip = 'count()'
-    ).properties(width = 300,
+            alt.X (alt.repeat(),
+            type = 'quantitative',
+            bin = alt.Bin(maxbins = 45)),
+            alt.Y('count()', stack = None),
+            tooltip = 'count()'
+            ).properties(width = 300,
             height = 300).repeat(
-    repeat = column_list,
-    columns = 2)
+            repeat = column_list,
+            columns = 2)
 
 
-    # pairwsie scatter plots
+            # pairwsie scatter plots
 
-    scatter1 = alt.Chart(train_df,
-                    title = 'Scatter plot of feature correlates with heating load').mark_point(opacity = 0.2,
+            scatter1 = alt.Chart(train_df,
+                    title = 'Scatter plot of feature correlates with heating load'
+                            ).mark_point(opacity = 0.2,
                                        size = 5).encode(
-    alt.X (alt.repeat(),
-           type = 'quantitative',
-           scale = alt.Scale(zero = False)),
-    alt.Y('Heating Load',
-          scale = alt.Scale(zero = False))
-    ).properties(
-    width = 300,
-    height = 300
-    ).repeat(
-    repeat = feats,
-        columns = 2
-    )
-    
-    # save charts and table
-    # dfi.export(corr, output_file1)
-    save_chart(distri, output_file2, 2)
-    save_chart(scatter1, output_file3, 2)
+            alt.X (alt.repeat(),
+               type = 'quantitative',
+               scale = alt.Scale(zero = False)),
+                alt.Y('Heating Load',
+                scale = alt.Scale(zero = False))
+                ).properties(
+                width = 300,
+               height = 300
+              ).repeat(
+              repeat = feats,
+              columns = 2
+            )
+       
+            # save charts and table
+            dfi.export(corr, output_file1)
+            save_chart(distri, output_file2, 2)
+            save_chart(scatter1, output_file3, 2)
 
+        
 if __name__ == "__main__":
     main(opt["<input_file>"], opt["<output_file1>"], opt["<output_file2>"], opt["<output_file3>"])
 
