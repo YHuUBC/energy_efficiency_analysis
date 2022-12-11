@@ -233,10 +233,14 @@ actual values.
 **Figure 5. Comparison of prediction and actual value on test data**
 ![alt tag](../results/energy_analysis/prediction.png)
 
+<!-- #region tags=[] -->
+
 #### Feature importance
 
 The table below gives the weights associated with the features for
 XGBoost model
+
+**Figure 6. The training and cross validation scores of the models**
 
 ![alt tag](../results/energy_analysis/feature_importance.png)
 
@@ -256,7 +260,7 @@ result/model folder example :
 
 python src/model_predict.py data/processed/train_df.csv
 data/processed/test_df.csv results/energy_analysis/training_score.png
-results/energy_analysis/prediction.png
+results/energy_analysis/prediction.png <!-- #endregion -->
 
 ## Limitations
 
