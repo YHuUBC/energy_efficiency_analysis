@@ -3,25 +3,35 @@ Analysis of the Energy Efficiency Project
 Mehwish Nabi, Yaou Hu, Nate Puangpanbut at the MDS program of University
 of British Columbia
 
--   [Authors of this project](#authors-of-this-project)
--   [Background information and summary of data
-    set](#background-information-and-summary-of-data-set)
--   [Research question](#research-question)
--   [Importance of the research
-    question](#importance-of-the-research-question)
--   [Download data](#download-data)
--   [Data pre-processing: partition the data set into training and test
-    sub-data
-    sets](#data-pre-processing-partition-the-data-set-into-training-and-test-sub-data-sets)
--   [Packages utilized in this
-    project](#packages-utilized-in-this-project)
--   [Exploratory data analysis with the train
-    set](#exploratory-data-analysis-with-the-train-set)
--   [Modelling and Analysis](#modelling-and-analysis)
--   [Limitations](#limitations)
--   [Assumptions](#assumptions)
--   [Future directions](#future-directions)
--   [References](#references)
+- <a href="#authors-of-this-project"
+  id="toc-authors-of-this-project">Authors of this project</a>
+- <a href="#background-information-and-summary-of-data-set"
+  id="toc-background-information-and-summary-of-data-set">Background
+  information and summary of data set</a>
+- <a href="#research-question" id="toc-research-question">Research
+  question</a>
+- <a href="#importance-of-the-research-question"
+  id="toc-importance-of-the-research-question">Importance of the research
+  question</a>
+- <a href="#download-data" id="toc-download-data">Download data</a>
+- <a
+  href="#data-pre-processing-partition-the-data-set-into-training-and-test-sub-data-sets"
+  id="toc-data-pre-processing-partition-the-data-set-into-training-and-test-sub-data-sets">Data
+  pre-processing: partition the data set into training and test sub-data
+  sets</a>
+- <a href="#packages-utilized-in-this-project"
+  id="toc-packages-utilized-in-this-project">Packages utilized in this
+  project</a>
+- <a href="#exploratory-data-analysis-with-the-train-set"
+  id="toc-exploratory-data-analysis-with-the-train-set">Exploratory data
+  analysis with the train set</a>
+- <a href="#modelling-and-analysis"
+  id="toc-modelling-and-analysis">Modelling and Analysis</a>
+- <a href="#limitations" id="toc-limitations">Limitations</a>
+- <a href="#assumptions" id="toc-assumptions">Assumptions</a>
+- <a href="#future-directions" id="toc-future-directions">Future
+  directions</a>
+- <a href="#references" id="toc-references">References</a>
 
 ## Authors of this project
 
@@ -58,8 +68,8 @@ responses. These variables are shown in the table below:
 ## Research question
 
 **Given building-related features such as Relative Compactness’,
-‘Surface Area,’ ‘Wall Area,’ ‘Roof Area,’ ‘Overall Height,’
-‘Orientation,’ ‘Glazing Area,’ and ‘Glazing Area Distribution,’ how
+‘Surface Area’, ‘Wall Area’, ‘Roof Area’, ‘Overall Height’,
+‘Orientation’, ‘Glazing Area’, and ‘Glazing Area Distribution’, how
 accurately can we predict the ‘Heating Load’ of the building?**
 
 **What is the contribution level of each feature associated to the
@@ -70,8 +80,8 @@ accurately can we predict the ‘Heating Load’ of the building?**
 There are growing concerns about energy waste and its detrimental
 environmental impact. This project focuses on the energy performance of
 residential buildings. Concentrating on eight building-related features
-(i.e., Relative Compactness’, ‘Surface Area,’ ‘Wall Area,’ ‘Roof Area,’
-‘Overall Height,’ ‘Orientation,’ ‘Glazing Area,’ and ‘Glazing Area
+(i.e., Relative Compactness’, ‘Surface Area’, ‘Wall Area’, ‘Roof Area’,
+‘Overall Height’, ‘Orientation’, ‘Glazing Area’, and ‘Glazing Area
 Distribution’), this project aims to predict the ‘Heating Load’ of the
 building and examine the contribution level of each feature associated
 to the ‘Heating Load’ of the building.
@@ -88,28 +98,28 @@ preservation and environment protection.
 ## Download data
 
 **NOTE: Data download can be conducted using ‘download.py’ in the
-energy\_efficiency\_analysis/src folder with the explanation below:**
+energy_efficiency_analysis/src folder with the explanation below:**
 
 ‘This code is to download original raw file data from UCI ML databses
 and convert it to csv file and finally save to provided destination
 folder example : python src/download.py
 –url=<http://archive.ics.uci.edu/ml/machine-learning-databases/00242/ENB2012_data.xlsx>
-–out\_file=data/raw/ENB2012\_data.csv’
+–out_file=data/raw/ENB2012_data.csv’
 
 ## Data pre-processing: partition the data set into training and test sub-data sets
 
 The data set was divided into train and test sets, with 70% train data
 and 30% test data.
 
-**NOTE: Data preprocessing can be conducted using ‘data\_preprocess.py’
-in the energy\_efficiency\_analysis/src folder with the explanation
+**NOTE: Data preprocessing can be conducted using ‘data_preprocess.py’
+in the energy_efficiency_analysis/src folder with the explanation
 below:**
 
 ‘This code is to csv data and performs data cleaning, pre-processingm,
 then separating into train and test data sets, and finally save to
-provided destination folder. example : python src/data\_preprocess.py
-data/processed/energy\_effeciency\_processed.csv
-data/processed/train\_df.csv data/processed/test\_df.csv’
+provided destination folder. example : python src/data_preprocess.py
+data/processed/energy_effeciency_processed.csv
+data/processed/train_df.csv data/processed/test_df.csv’
 
 **Table 2. Partition of the data set**
 
@@ -137,15 +147,15 @@ The exploratory data analysis was conducted through the following steps:
 
 2.  EDA was performed on the train set. We checked the data types and
     found no missing values. Then we checked the data distribution
-    through bar plots, value\_counts, correlations, and pairwise scatter
+    through bar plots, value_counts, correlations, and pairwise scatter
     plots. Through the EDA, we could identify that all the variables are
     numeric. We kept all the features for subsequent analysis.
 
 3.  Based on the above analysis, we aim to do a supervised machine
     learning model with ‘Heating Load’ as the target.
 
-**NOTE: Data preprocessing can be conducted using ‘data\_preprocess.py’
-in the energy\_efficiency\_analysis/src folder**
+**NOTE: Data preprocessing can be conducted using ‘data_preprocess.py’
+in the energy_efficiency_analysis/src folder**
 
 **Figure 1. Correlations among the varibles in this study** ![alt
 tag](../results/eda/eda_corr_table.png)
@@ -156,14 +166,14 @@ tag](../results/eda/eda_distribution_plot.png)
 **Figure 3. Scatter plot of variables of interest** ![alt
 tag](../results/eda/eda_scatter1_plot.png)
 
-**NOTE: The EDA can be conducted using ‘eda\_script\_plots\_update.py’
-in the energy\_efficiency\_analysis/src folder:**
+**NOTE: The EDA can be conducted using ‘eda_script_plots_update.py’ in
+the energy_efficiency_analysis/src folder:**
 
 ‘This code is to read the train data set and performs explanatory data
 analysis and finally save to provided destination folder example :
-python src/eda\_script\_plots\_update.py data/processed/train\_df.csv
-results/eda/eda\_corr\_table.png results/eda/eda\_distribution\_plot.png
-results/eda/eda\_scatter1\_plot.png results/eda/eda\_scatter2\_plot.png’
+python src/eda_script_plots_update.py data/processed/train_df.csv
+results/eda/eda_corr_table.png results/eda/eda_distribution_plot.png
+results/eda/eda_scatter1_plot.png results/eda/eda_scatter2_plot.png’
 
 ## Modelling and Analysis
 
@@ -173,39 +183,38 @@ Orientation,Glazing Area, Glazing Area Distribution.
 
 The steps involved are as :
 
--   loading the train\_df.csv and test\_df.csv dataset created by the
-    data\_preprocess.py script
+- loading the train_df.csv and test_df.csv dataset created by the
+  data_preprocess.py script
 
--   the train and test data sets are then splitting the data into
-    X\_train and y\_train based on the feature to be predicted i.e ,
-    heating load
+- the train and test data sets are then splitting the data into X_train
+  and y_train based on the feature to be predicted i.e , heating load
 
--   the models are trained on the X\_train and y\_train
+- the models are trained on the X_train and y_train
 
--   the models are saved using pickle.
+- the models are saved using pickle.
 
--   Predictions are made on test data using the model that has highest
-    cross validation score
+- Predictions are made on test data using the model that has highest
+  cross validation score
 
 The models used for the training and predictions of the data are :
 
--   KNN
+- KNN
 
--   Ridge
+- Ridge
 
--   Decision Tree
+- Decision Tree
 
--   Support Vector Machine
+- Support Vector Machine
 
--   Random Forest
+- Random Forest
 
--   XG Boost
+- XG Boost
 
 The training and cross validation scores of the models are in the below
 table:
 
 **Figure 4. The training and cross validation scores of the models**
-![alt tag](../results/energy_analysis/training_score.png)
+![alt tag](../results/energy_analysis/score.png)
 
 As per the cross validation scores the XGB has the highest cross
 validation score of 0.998.
@@ -224,9 +233,20 @@ actual values.
 **Figure 5. Comparison of prediction and actual value on test data**
 ![alt tag](../results/energy_analysis/prediction.png)
 
+#### Feature importance
+
+The table below gives the weights associated with the features for
+XGBoost model
+
+![alt tag](../results/energy_analysis/feature_importance.png)
+
+We observe that Relative Compactness has the highest coefficient whereas
+overall height and surface area have 0 values indicating that the
+features have no effect on the prediction of the heating load of a
+building
+
 **NOTE: The above mentioned modelling and analysis can be conducted
-using ‘model\_predict.py’ in the energy\_efficiency\_analysis/src
-folder**
+using ‘model_predict.py’ in the energy_efficiency_analysis/src folder**
 
 ’This code is to read the train data set and performs model fitting with
 various types of models, select the best model and performs prediction,
@@ -234,9 +254,9 @@ finally, saving figures of cv-score comparison and best prediction on
 provided destination folder, also, save all models as pickle file to
 result/model folder example :
 
-python src/model\_predict.py data/processed/train\_df.csv
-data/processed/test\_df.csv results/energy\_analysis/training\_score.png
-results/energy\_analysis/prediction.png
+python src/model_predict.py data/processed/train_df.csv
+data/processed/test_df.csv results/energy_analysis/training_score.png
+results/energy_analysis/prediction.png
 
 ## Limitations
 
