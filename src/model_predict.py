@@ -153,35 +153,43 @@ def best_model(out2, X_train, y_train,  X_test, y_test):
     data.to_csv("results/energy_analysis/feature_importance.csv", index = False)
     
 def main(input1, input2, out1, out2):
-
-    
+     # test the input_file type
+    if input1.split('.')[-1] != 'csv' or input2.split('.')[-1] != 'csv':
+        raise ValueError("Only csv format is supported for input files")
+    elif out1.split('.')[-1] != 'png' or out2.split('.')[-1] != 'png':
+        raise ValueError("Only png format is supported for output files")
+    else:
     # read data
-    train_df = pd.read_csv(input1)
-    test_df =  pd.read_csv(input2)
-    
-    # separate X, y
-    X_test , y_test = test_df.drop(columns=["Heating Load", "Cooling Load"]), test_df["Heating Load"]
-    X_train , y_train = train_df.drop(columns=["Heating Load", "Cooling Load"]), train_df["Heating Load"]
-    
-    # construct interested models
-    models = {
-        "KNN": KNeighborsRegressor(),
-        "Ridge": Ridge(),
-        "DecisionTree": DecisionTreeRegressor(),
-        "SVR": SVR(),
-        "RandomForest": RandomForestRegressor(),
-        "XGB": xg.XGBRegressor()
-        }
+        try : 
+            train_df = pd.read_csv(input1)
+            test_df =  pd.read_csv(input2)
 
-    # run models 
-    run_model(models, out1, X_train,y_train)
-    
-    # save models
-    save_models(models, X_train,y_train)
-    
-    # best model XGB
-    best_model(out2, X_train, y_train,  X_test, y_test)
-    
+            # separate X, y
+            X_test , y_test = test_df.drop(columns=["Heating Load", "Cooling Load"]), test_df["Heating Load"]
+            X_train , y_train = train_df.drop(columns=["Heating Load", "Cooling Load"]), train_df["Heating Load"]
+
+            # construct interested models
+            models = {
+                "KNN": KNeighborsRegressor(),
+                "Ridge": Ridge(),
+                "DecisionTree": DecisionTreeRegressor(),
+                "SVR": SVR(),
+                "RandomForest": RandomForestRegressor(),
+                "XGB": xg.XGBRegressor()
+                }
+
+            # run models 
+            run_model(models, out1, X_train,y_train)
+
+            # save models
+            save_models(models, X_train,y_train)
+
+            # best model XGB
+            best_model(out2, X_train, y_train,  X_test, y_test)
+        except  FileNotFoundError:
+            print("file not found")
+
+
 # -
 
 if __name__ == "__main__":
