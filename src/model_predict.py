@@ -10,7 +10,7 @@
 """Trains the various models.
 Usage: src/model_predict.py <input1> <input2> <out1> <out2>
 
-python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.csv results/energy_analysis/prediction.png
+python src/model_predict.py data/processed/train_df.csv data/processed/test_df.csv results/energy_analysis/training_score.png results/energy_analysis/prediction.png
 
 Options:
 <input1>  the file and path of train dataset(must be in standard csv format)
@@ -88,10 +88,11 @@ def run_model(models, out1,X_train,y_train):
         scores[modelname] = pd.DataFrame(cross_validate(pipe, X_train,y_train, return_train_score= True, scoring = 'r2')).agg(['mean', 'std']).round(3).T
 
     result_df  = pd.concat(scores, axis=1)
+    #dfi.export(result_df, out1)
     # export score result
     str.replace(out1, ".png",".csv")
     result_df.to_csv(out1)
-    # dfi.export(result_df, out1)
+    
     
     
 def save_models(models,X_train,y_train):

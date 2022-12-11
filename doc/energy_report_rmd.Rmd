@@ -165,7 +165,7 @@ The training and cross validation scores of the models are in the below table:
 
 
 **Figure 4. The training and cross validation scores of the models**
-![alt tag](../results/energy_analysis/training_score.png)
+![alt tag](../results/energy_analysis/score.png)
 
 
 As per the cross validation scores the XGB has the highest cross validation  score of 0.998. 
@@ -180,6 +180,14 @@ The graphical representation of the actual and predicted values in the test data
 
 **Figure 5. Comparison of prediction and actual value on test data**
 ![alt tag](../results/energy_analysis/prediction.png)
+
+
+#### Feature importance
+The table below gives the weights associated with the features for XGBoost model
+
+![alt tag](../results/energy_analysis/feature_importance.png)
+
+We observe that Relative Compactness has the highest coefficient whereas overall height and surface area have 0 values indicating that the features have no effect on the prediction of the heating load of a building
 
 **NOTE: The above mentioned  modelling and analysis can be conducted using 'model_predict.py' in the energy_efficiency_analysis/src folder**
 
